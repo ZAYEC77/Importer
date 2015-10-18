@@ -35,8 +35,15 @@ namespace Importer
 
                 if (MessageBox.Show("Завантажити прайс?", "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    converter.Upload();
-                    MessageBox.Show("Файл завантажено");
+                    try
+                    {
+                        converter.Upload();
+                        MessageBox.Show("Файл завантажено");
+                    }
+                    catch (Exception exeption)
+                    {
+                        MessageBox.Show(String.Format("Помилка: {0}", exeption.Message));
+                    }
                 }
             }
         }

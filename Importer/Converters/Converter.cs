@@ -48,15 +48,18 @@ namespace Importer.Converters
 
         protected void LoadCoef()
         {
-            var coefStrings = config.Coeficients.Split('\n');
-            foreach (var item in coefStrings)
+            if (config.Coeficients != null)
             {
-                var s = item.Split(' ');
-                if (s.Length != 3) continue;
-                var begin = System.Convert.ToDouble(s[0]);
-                var end = System.Convert.ToDouble(s[1]);
-                var percent = System.Convert.ToDouble(s[2]);
-                pricesCoef.Add(new Double[] { begin, end, percent });
+                var coefStrings = config.Coeficients.Split('\n');
+                foreach (var item in coefStrings)
+                {
+                    var s = item.Split(' ');
+                    if (s.Length != 3) continue;
+                    var begin = System.Convert.ToDouble(s[0]);
+                    var end = System.Convert.ToDouble(s[1]);
+                    var percent = System.Convert.ToDouble(s[2]);
+                    pricesCoef.Add(new Double[] { begin, end, percent });
+                }
             }
         }
         public static Converter CreateConverter(Price config, string fileName)
@@ -106,9 +109,14 @@ namespace Importer.Converters
             Double rate = System.Convert.ToDouble(config.Rate);
             if (sd.ShowDialog() == DialogResult.OK)
             {
-                var csvFile = new FileStream(Directory.GetCurrentDirectory() + "\\" + config.FileName, FileMode.Create, FileAccess.Write);
-                var csv = new StreamWriter(csvFile);
-                csv.WriteLine("Код;Назва;Виробник;Ціна;Кількість");
+                var createCsv = config.FileName != null;
+                StreamWriter csv = new StreamWriter(Stream.Null);
+                if (createCsv)
+                {
+                    var csvFile = new FileStream(Directory.GetCurrentDirectory() + "\\" + config.FileName, FileMode.Create, FileAccess.Write);
+                    csv = new StreamWriter(csvFile);
+                    csv.WriteLine("Код;Назва;Виробник;Ціна;Кількість");
+                }
                 using (FileStream stream = new FileStream(sd.FileName, FileMode.Create, FileAccess.Write))
                 {
                     IWorkbook wb = new XSSFWorkbook();
@@ -143,14 +151,21 @@ namespace Importer.Converters
 
                         item[0] = config.RemovePrefix(item[0]);
                         IRow row = sheet.CreateRow(k++);
-                        csv.WriteLine(String.Join(";", item.Select(x => x.Trim()).ToList()));
+
+                        if (createCsv)
+                        {
+                            csv.WriteLine(String.Join(";", item.Select(x => x.Trim()).ToList()));
+                        }
                         for (int j = 0; j < 5; j++)
                         {
                             ICell cell = row.CreateCell(j);
                             cell.SetCellValue(item[j]);
                         }
                     }
-                    csv.Close();
+                    if (createCsv)
+                    {
+                        csv.Close();
+                    }
                     wb.Write(stream);
                 }
             }
@@ -162,13 +177,30 @@ namespace Importer.Converters
         public void Upload()
         {
             var sourceFile = Directory.GetCurrentDirectory() + "\\" + config.FileName;
-            FtpWebRequest request = (FtpWebRequest)WebRequest.Create(App.Instance.Host);
-            request.Method = WebRequestMethods.Ftp.UploadFile;
-            request.RenameTo = config.FileName;
+            var uri = App.Instance.Host + "//" + config.FileName;
+            FtpWebRequest request;
+            FtpWebResponse response;
+            NetworkCredential credentials = new NetworkCredential(App.Instance.User, App.Instance.Pass);
 
+            request = (FtpWebRequest)WebRequest.Create(uri);
+            request.Credentials = credentials;
+            request.Method = WebRequestMethods.Ftp.GetFileSize;
+
+            response = (FtpWebResponse)request.GetResponse();
+            if (response.StatusCode != FtpStatusCode.ActionNotTakenFileUnavailable)
+            {
+                // To delete file
+                FtpWebRequest delRequest = (FtpWebRequest)WebRequest.Create(uri);
+                delRequest.Credentials = credentials;
+                delRequest.Method = WebRequestMethods.Ftp.DeleteFile;
+                response = (FtpWebResponse)delRequest.GetResponse();
+            }
+
+            request = (FtpWebRequest)WebRequest.Create(uri);
+            request.Method = WebRequestMethods.Ftp.UploadFile;
 
             // This example assumes the FTP site uses anonymous logon.
-            request.Credentials = new NetworkCredential(App.Instance.User, App.Instance.Pass);
+            request.Credentials = credentials;
 
             // Copy the contents of the file to the request stream.
             StreamReader sourceStream = new StreamReader(sourceFile);
@@ -181,7 +213,7 @@ namespace Importer.Converters
             requestStream.Write(fileContents, 0, fileContents.Length);
             requestStream.Close();
 
-            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+            response = (FtpWebResponse)request.GetResponse();
 
             response.Close();
         }

@@ -25,13 +25,17 @@ namespace Importer.Converters
             this.config = config;
             LoadCoef();
 
-            var strList = config.AmountCol.Split(',');
-            foreach (var item in strList)
+            if (config.AmountCol != null)
             {
-                amountCols.Add(System.Convert.ToInt32(item));
+                var strAmountList = config.AmountCol.Split(',');
+                foreach (var item in strAmountList)
+                {
+                    amountCols.Add(System.Convert.ToInt32(item));
+                }
             }
 
-            strList = config.SheetNumber.Split(',');
+
+            var strList = config.SheetNumber.Split(',');
             foreach (var item in strList)
             {
                 sheetNumbs.Add(System.Convert.ToInt32(item));
@@ -110,17 +114,29 @@ namespace Importer.Converters
 
         private void FromTableToData(DataTable table)
         {
+            int defaultAmount;
+            int.TryParse(config.DefaultAmount, out defaultAmount);
+            defaultAmount = (defaultAmount > 0) ? defaultAmount : 1;
+
             for (int i = System.Convert.ToInt32(config.BeginWith); i < table.Rows.Count; i++)
             {
                 var row = table.Rows[i];
                 double amount = 0;
-                foreach (var item in amountCols)
+                if (amountCols.Count == 0)
                 {
-                    var s = row[item - 1].ToString().Replace('-', ' ').Replace('+', ' ').Replace('>', ' ').Replace('.', ',').Trim();
-                    if (s == "") continue;
-                    Double _amount;
-                    Double.TryParse(s, out _amount);
-                    amount += _amount;
+                    amount = defaultAmount;
+                }
+                else
+                {
+
+                    foreach (var item in amountCols)
+                    {
+                        var s = row[item - 1].ToString().Replace('-', ' ').Replace('+', ' ').Replace('>', ' ').Replace('.', ',').Trim();
+                        if (s == "") continue;
+                        Double _amount;
+                        Double.TryParse(s, out _amount);
+                        amount += _amount;
+                    }
                 }
                 if (amount > 0)
                 {

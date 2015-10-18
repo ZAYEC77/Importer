@@ -25,8 +25,10 @@ namespace Importer
         public string CodeCol { get; set; }
         public string Coeficients { get; set; }
         public string Prefixes { get; set; }
+        public bool RemoveAllPrefixes { get; set; }
         public string Rate { get; set; }
         public string FileName { get; set; }
+        public string DefaultAmount { get; set; }
 
         public Price()
         {
@@ -40,17 +42,30 @@ namespace Importer
 
         public string RemovePrefix(string p)
         {
-            foreach (var item in _prefixes)
+            var newVal = p.Trim();
+            if (this.RemoveAllPrefixes)
             {
-                if (_prefixes.Length > 0)
+                var words = newVal.Split(' ').ToList();
+                if (words.Count > 1)
                 {
-                    if (p.StartsWith(item, StringComparison.OrdinalIgnoreCase))
+                    words.RemoveAt(0);
+                    return String.Join(" ", words);
+                }
+            }
+            else
+            {
+                foreach (var item in _prefixes)
+                {
+                    if (_prefixes.Length > 0)
                     {
-                        return p.Replace(item, " ").Trim();
+                        if (newVal.StartsWith(item, StringComparison.OrdinalIgnoreCase))
+                        {
+                            return newVal.Replace(item, " ").Trim();
+                        }
                     }
                 }
             }
-            return p;
+            return newVal;
         }
 
         public void Init()
@@ -64,5 +79,6 @@ namespace Importer
                 _prefixes = Prefixes.Replace("\n", "").Split('\r');
             }
         }
+
     }
 }
