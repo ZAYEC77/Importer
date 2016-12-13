@@ -27,15 +27,18 @@ namespace Importer.Converters
 
             var table = ConvertCSVtoDataTable(fileName);
 
-            for (int i = System.Convert.ToInt32(config.BeginWith); i < table.Rows.Count; i++)
+            var beginFrom = System.Convert.ToInt32(config.BeginWith);
+
+            for (int i = beginFrom; i < table.Rows.Count; i++)
             {
                 var row = table.Rows[i];
                 double amount = 0;
                 foreach (var item in amountCols)
                 {
-                    var s = row[item - 1].ToString().Replace('>', ' ').Replace(".", ",").Trim();
+                    var s = row[item - 1].ToString().Replace('(', ' ').Replace(')', ' ').Replace('>', ' ').Replace(".", ",").Trim();
                     if (s == "") continue;
-                    var _amount = System.Convert.ToDouble(s);
+                    var _amount = 0;
+                    Int32.TryParse(s, out _amount);
                     amount += _amount;
                 }
                 data.Add(new string[] {
@@ -61,25 +64,39 @@ namespace Importer.Converters
         public static DataTable ConvertCSVtoDataTable(string strFilePath)
         {
             DataTable dt = new DataTable();
-            using (StreamReader sr = new StreamReader(strFilePath,win1251))
+            using (StreamReader sr = new StreamReader(strFilePath, win1251))
             {
                 char delimiter = '\t';
                 string[] headers = sr.ReadLine().Split(delimiter);
                 if (headers.Length == 1)
                 {
                     delimiter = ';';
-                    headers = sr.ReadLine().Split(delimiter);
+                    headers = headers[0].Split(delimiter);
                 }
                 foreach (string header in headers)
                 {
-                    dt.Columns.Add(header);
+                    var index = dt.Columns.IndexOf(header);
+                    if (index > -1)
+                    {
+                        dt.Columns.Add(header + index);
+                    }
+                    else
+                    {
+                        dt.Columns.Add(header);
+                    }
                 }
+
+                int length = headers.Length;
                 while (!sr.EndOfStream)
                 {
                     string[] rows = sr.ReadLine().Split(delimiter);
                     DataRow dr = dt.NewRow();
-                    for (int i = 0; i < headers.Length; i++)
+                    for (int i = 0; i < length; i++)
                     {
+                        if (rows.Length < length)
+                        {
+                            continue;
+                        }
                         dr[i] = (rows[i].ToString().Trim('\"'));
                     }
                     dt.Rows.Add(dr);

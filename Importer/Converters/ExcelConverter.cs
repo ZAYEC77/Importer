@@ -25,7 +25,7 @@ namespace Importer.Converters
             this.config = config;
             LoadCoef();
 
-            if (config.AmountCol != null)
+            if (config.AmountCol != null && config.AmountCol.Length > 0)
             {
                 var strAmountList = config.AmountCol.Split(',');
                 foreach (var item in strAmountList)
@@ -33,7 +33,6 @@ namespace Importer.Converters
                     amountCols.Add(System.Convert.ToInt32(item));
                 }
             }
-
 
             var strList = config.SheetNumber.Split(',');
             foreach (var item in strList)
@@ -50,9 +49,10 @@ namespace Importer.Converters
             if (is2003)
             {
                 var connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";Extended Properties=\"Excel 12.0;IMEX=1;HDR=NO;TypeGuessRows=0;ImportMixedTypes=Text\""; ;
-                using (var conn = new OleDbConnection(connectionString))
+                var conn = new OleDbConnection(connectionString);
+                conn.Open();
+                using (conn)
                 {
-                    conn.Open();
 
                     var sheets = conn.GetOleDbSchemaTable(System.Data.OleDb.OleDbSchemaGuid.Tables, new object[] { null, null, null, "TABLE" });
                     using (var cmd = conn.CreateCommand())
@@ -86,8 +86,15 @@ namespace Importer.Converters
                     int rowCount = sheet.LastRowNum;
                     for (int c = 0; c < colCount; c++)
                     {
-
-                        table.Columns.Add(headerRow.GetCell(c).ToString());
+                        var cell = headerRow.GetCell(c);
+                        if (cell == null)
+                        {
+                            table.Columns.Add("Col_" + c);
+                        }
+                        else
+                        {
+                            table.Columns.Add(cell.ToString());
+                        }
                     }
 
                     while (rows.MoveNext())

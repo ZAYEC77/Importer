@@ -53,8 +53,19 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -80,8 +91,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -112,6 +123,17 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.label22);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox21);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox20);
+            this.splitContainer1.Panel2.Controls.Add(this.label21);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox19);
+            this.splitContainer1.Panel2.Controls.Add(this.label20);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox18);
+            this.splitContainer1.Panel2.Controls.Add(this.checkBox3);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox17);
+            this.splitContainer1.Panel2.Controls.Add(this.label19);
+            this.splitContainer1.Panel2.Controls.Add(this.checkBox2);
             this.splitContainer1.Panel2.Controls.Add(this.checkBox1);
             this.splitContainer1.Panel2.Controls.Add(this.label18);
             this.splitContainer1.Panel2.Controls.Add(this.label12);
@@ -141,22 +163,24 @@
             this.splitContainer1.Panel2.Controls.Add(this.textBox2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.textBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(791, 257);
-            this.splitContainer1.SplitterDistance = 261;
+            this.splitContainer1.Size = new System.Drawing.Size(1073, 336);
+            this.splitContainer1.SplitterDistance = 262;
             this.splitContainer1.TabIndex = 0;
             // 
             // textBox14
             // 
+            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBox14.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceApp, "Pass", true));
-            this.textBox14.Location = new System.Drawing.Point(86, 228);
+            this.textBox14.Location = new System.Drawing.Point(87, 310);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(172, 20);
             this.textBox14.TabIndex = 10;
             // 
             // label16
             // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(48, 231);
+            this.label16.Location = new System.Drawing.Point(49, 313);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(33, 13);
             this.label16.TabIndex = 9;
@@ -164,16 +188,18 @@
             // 
             // textBox13
             // 
+            this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBox13.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceApp, "User", true));
-            this.textBox13.Location = new System.Drawing.Point(86, 204);
+            this.textBox13.Location = new System.Drawing.Point(87, 286);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(172, 20);
             this.textBox13.TabIndex = 8;
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(48, 207);
+            this.label15.Location = new System.Drawing.Point(49, 289);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(32, 13);
             this.label15.TabIndex = 7;
@@ -181,16 +207,18 @@
             // 
             // textBox12
             // 
+            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBox12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSourceApp, "Host", true));
-            this.textBox12.Location = new System.Drawing.Point(86, 178);
+            this.textBox12.Location = new System.Drawing.Point(87, 260);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(172, 20);
             this.textBox12.TabIndex = 6;
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(48, 181);
+            this.label14.Location = new System.Drawing.Point(49, 263);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(32, 13);
             this.label14.TabIndex = 5;
@@ -198,8 +226,9 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(12, 181);
+            this.label13.Location = new System.Drawing.Point(13, 263);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(30, 13);
             this.label13.TabIndex = 4;
@@ -230,7 +259,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(261, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(262, 25);
             this.bindingNavigator1.TabIndex = 3;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -250,8 +279,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorDeleteItem
@@ -333,8 +362,94 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 28);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(246, 147);
+            this.listBox1.Size = new System.Drawing.Size(247, 225);
             this.listBox1.TabIndex = 0;
+            // 
+            // textBox20
+            // 
+            this.textBox20.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "SubPercent", true));
+            this.textBox20.Location = new System.Drawing.Point(228, 281);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(107, 20);
+            this.textBox20.TabIndex = 33;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(225, 260);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(113, 13);
+            this.label21.TabIndex = 32;
+            this.label21.Text = "Зменшити ціну на (%)";
+            // 
+            // textBox19
+            // 
+            this.textBox19.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "ProviderCode", true));
+            this.textBox19.Location = new System.Drawing.Point(12, 280);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(100, 20);
+            this.textBox19.TabIndex = 31;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(11, 260);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(148, 13);
+            this.label20.TabIndex = 30;
+            this.label20.Text = "Код постачальника на сайті";
+            // 
+            // textBox18
+            // 
+            this.textBox18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox18.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "NewBrand", true));
+            this.textBox18.Location = new System.Drawing.Point(525, 306);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(127, 20);
+            this.textBox18.TabIndex = 29;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSource, "ReplaceBrand", true));
+            this.checkBox3.Location = new System.Drawing.Point(525, 289);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(105, 17);
+            this.checkBox3.TabIndex = 28;
+            this.checkBox3.Text = "Замінити бренд";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // textBox17
+            // 
+            this.textBox17.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "Suffixes", true));
+            this.textBox17.Location = new System.Drawing.Point(525, 51);
+            this.textBox17.Multiline = true;
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox17.Size = new System.Drawing.Size(128, 229);
+            this.textBox17.TabIndex = 27;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(522, 12);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 13);
+            this.label19.TabIndex = 26;
+            this.label19.Text = "Суфікси";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.bindingSource, "RoundPrice", true));
+            this.checkBox2.Location = new System.Drawing.Point(388, 288);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(102, 17);
+            this.checkBox2.TabIndex = 25;
+            this.checkBox2.Text = "Округляти ціни";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -348,6 +463,15 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(225, 207);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(151, 13);
+            this.label18.TabIndex = 23;
+            this.label18.Text = "Кількість за замовчуванням";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -356,6 +480,14 @@
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 23;
             this.label12.Text = "Курс";
+            // 
+            // textBox16
+            // 
+            this.textBox16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "DefaultAmount", true));
+            this.textBox16.Location = new System.Drawing.Point(228, 228);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(107, 20);
+            this.textBox16.TabIndex = 22;
             // 
             // textBox11
             // 
@@ -380,7 +512,8 @@
             this.textBox10.Location = new System.Drawing.Point(388, 51);
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(128, 182);
+            this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox10.Size = new System.Drawing.Size(128, 225);
             this.textBox10.TabIndex = 20;
             // 
             // label10
@@ -398,6 +531,7 @@
             this.textBox9.Location = new System.Drawing.Point(225, 28);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
+            this.textBox9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox9.Size = new System.Drawing.Size(157, 137);
             this.textBox9.TabIndex = 18;
             // 
@@ -573,28 +707,30 @@
             this.textBox1.Size = new System.Drawing.Size(207, 20);
             this.textBox1.TabIndex = 0;
             // 
-            // textBox16
+            // textBox21
             // 
-            this.textBox16.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "DefaultAmount", true));
-            this.textBox16.Location = new System.Drawing.Point(228, 228);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(107, 20);
-            this.textBox16.TabIndex = 22;
+            this.textBox21.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "BrandExtra", true));
+            this.textBox21.Location = new System.Drawing.Point(667, 51);
+            this.textBox21.Multiline = true;
+            this.textBox21.Name = "textBox21";
+            this.textBox21.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox21.Size = new System.Drawing.Size(128, 229);
+            this.textBox21.TabIndex = 34;
             // 
-            // label18
+            // label22
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(225, 207);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(151, 13);
-            this.label18.TabIndex = 23;
-            this.label18.Text = "Кількість за замовчуванням";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(664, 12);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(109, 13);
+            this.label22.TabIndex = 35;
+            this.label22.Text = "Націнка по брендам";
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 257);
+            this.ClientSize = new System.Drawing.Size(1073, 336);
             this.Controls.Add(this.splitContainer1);
             this.Name = "SettingsForm";
             this.Text = "Налаштування";
@@ -668,5 +804,16 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox21;
     }
 }

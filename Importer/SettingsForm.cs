@@ -38,7 +38,7 @@ namespace Importer
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            this.textBox10.Enabled = !this.checkBox1.Checked;
+            //this.textBox10.Enabled = !this.checkBox1.Checked;
         }
 
     }

@@ -33,23 +33,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>G:\Завантаження\NPOI binary 2.1.3.1\dotnet4\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\NPOI 2.2.0.0\dotnet4\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\NPOI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\NPOI 2.2.0.0\dotnet4\NPOI.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\NPOI.OOXML.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\NPOI 2.2.0.0\dotnet4\NPOI.OOXML.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\NPOI.OpenXml4Net.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\NPOI 2.2.0.0\dotnet4\NPOI.OpenXml4Net.dll</HintPath>
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\NPOI.OpenXmlFormats.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\NPOI 2.2.0.0\dotnet4\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,7 +66,28 @@
     <Compile Include="App.cs" />
     <Compile Include="Converters\Converter.cs" />
     <Compile Include="Converters\CSVConverter.cs" />
+    <Compile Include="Converters\DBFConverter1.cs" />
     <Compile Include="Converters\ExcelConverter.cs" />
+    <Compile Include="CrossConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossConverter.Designer.cs">
+      <DependentUpon>CrossConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrossReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossReplace.Designer.cs">
+      <DependentUpon>CrossReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cross\Config.cs" />
+    <Compile Include="Cross\Converter.cs" />
+    <Compile Include="Cross\CrossSheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cross\CrossSheet.Designer.cs">
+      <DependentUpon>CrossSheet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Extra.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -74,7 +95,19 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MultiPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiPriceForm.Designer.cs">
+      <DependentUpon>MultiPriceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Price.cs" />
+    <Compile Include="PriceSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PriceSelector.Designer.cs">
+      <DependentUpon>PriceSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProgressForm.cs">
       <SubType>Form</SubType>
@@ -89,8 +122,23 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrossConverter.resx">
+      <DependentUpon>CrossConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossReplace.resx">
+      <DependentUpon>CrossReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cross\CrossSheet.resx">
+      <DependentUpon>CrossSheet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiPriceForm.resx">
+      <DependentUpon>MultiPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceSelector.resx">
+      <DependentUpon>PriceSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressForm.resx">
       <DependentUpon>ProgressForm.cs</DependentUpon>

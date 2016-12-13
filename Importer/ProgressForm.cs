@@ -30,20 +30,24 @@ namespace Importer
                 var price = App.Instance.Prices[comboBox1.SelectedIndex];
 
                 var converter = Converter.CreateConverter(price, FileName);
+                converter.UseCoeficients = checkBox1.Checked;
                 converter.Convert();
                 MessageBox.Show("Збережено");
+            }
+        }
 
-                if (MessageBox.Show("Завантажити прайс?", "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+        private void uploadFile(Converter converter)
+        {
+            if (MessageBox.Show("Завантажити прайс?", "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                try
                 {
-                    try
-                    {
-                        converter.Upload();
-                        MessageBox.Show("Файл завантажено");
-                    }
-                    catch (Exception exeption)
-                    {
-                        MessageBox.Show(String.Format("Помилка: {0}", exeption.Message));
-                    }
+                    converter.Upload();
+                    MessageBox.Show("Файл завантажено");
+                }
+                catch (Exception exeption)
+                {
+                    MessageBox.Show(String.Format("Помилка: {0}", exeption.Message));
                 }
             }
         }
