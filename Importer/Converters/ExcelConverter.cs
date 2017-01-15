@@ -137,9 +137,15 @@ namespace Importer.Converters
                 {
                     foreach (var item in amountCols)
                     {
+                        Double _amount;
+                        if (row[item - 1].ToString().Trim() == "есть")
+                        {
+                            Double.TryParse(config.DefaultAmount, out _amount);
+                            amount = _amount;
+                            break;
+                        }
                         var s = row[item - 1].ToString().Replace('-', ' ').Replace('+', ' ').Replace('>', ' ').Replace('.', ',').Trim();
                         if (s == "") continue;
-                        Double _amount;
                         Double.TryParse(s, out _amount);
                         amount += _amount;
                     }
