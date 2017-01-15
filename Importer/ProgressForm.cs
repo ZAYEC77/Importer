@@ -27,27 +27,36 @@ namespace Importer
         {
             if (comboBox1.SelectedIndex > -1)
             {
+                var convertForSkyAuto = checkBox1.Checked;
+                var convertForAvtoPro = checkBox2.Checked;
+
+                if (!(convertForSkyAuto || convertForAvtoPro))
+                {
+                    MessageBox.Show("Оберіть тип прайсу");
+                    return;
+                }
                 var price = App.Instance.Prices[comboBox1.SelectedIndex];
 
                 var converter = Converter.CreateConverter(price, FileName);
-                converter.UseCoeficients = checkBox1.Checked;
-                converter.Convert();
-                MessageBox.Show("Збережено");
-            }
-        }
-
-        private void uploadFile(Converter converter)
-        {
-            if (MessageBox.Show("Завантажити прайс?", "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-            {
-                try
+                var data = converter.LoadData();
+                var sd = new SaveFileDialog();
+                if (sd.ShowDialog() == DialogResult.OK)
                 {
-                    converter.Upload();
-                    MessageBox.Show("Файл завантажено");
+                    if (convertForSkyAuto)
+                    {
+                        converter.UseCoeficients = false;
+                        converter.SaveCsv(data, sd.FileName);
+                    }
+                    if (convertForAvtoPro)
+                    {
+                        converter.UseCoeficients = true;
+                        converter.SaveExcel(data, sd.FileName);
+                    }
+                    MessageBox.Show("Збережено");
                 }
-                catch (Exception exeption)
+                else
                 {
-                    MessageBox.Show(String.Format("Помилка: {0}", exeption.Message));
+                    MessageBox.Show("Файл для збереження не вибрано");
                 }
             }
         }

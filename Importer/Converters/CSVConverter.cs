@@ -16,8 +16,9 @@ namespace Importer.Converters
             LoadCoef();
         }
 
-        public override void LoadData()
+        public override List<string[]> LoadData()
         {
+            var data = new List<string[]>();
             var strList = config.AmountCol.Split(',');
             var amountCols = new List<int>();
             foreach (var item in strList)
@@ -49,6 +50,7 @@ namespace Importer.Converters
                     amount.ToString()
                 });
             }
+            return data;
         }
 
         protected static Encoding utf8 = Encoding.GetEncoding("utf-8");

@@ -14,8 +14,9 @@ namespace Importer.Converters
 
         private OdbcConnection Conn = null;
 
-        public override void LoadData()
+        public override List<string[]> LoadData()
         {
+            var data = new List<string[]>();
             var command = "SELECT * FROM tmp";
 
             var localFile = App.GetHomeDir() + "tmp.dbf";
@@ -63,6 +64,8 @@ namespace Importer.Converters
                 });
             }
             File.Delete(localFile);
+
+            return data;
         }
 
         public DBFConverter(Price config)

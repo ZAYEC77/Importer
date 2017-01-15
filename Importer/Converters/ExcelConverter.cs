@@ -17,7 +17,6 @@ namespace Importer.Converters
 {
     public class ExcelConverter : Converter
     {
-
         List<int> amountCols = new List<int>();
         List<int> sheetNumbs = new List<int>();
         public ExcelConverter(Price config)
@@ -41,8 +40,9 @@ namespace Importer.Converters
             }
         }
 
-        public override void LoadData()
+        public override List<string[]> LoadData()
         {
+            var data = new List<string[]>();
             DataTable table;
             bool is2003 = (Path.GetExtension(fileName) == ".xls");
 
@@ -64,7 +64,7 @@ namespace Importer.Converters
                         adapter.Fill(ds);
                         table = ds.Tables[System.Convert.ToInt32(config.SheetNumber) - 1];
                     }
-                    FromTableToData(table);
+                    FromTableToData(data, table);
                 }
             }
             else
@@ -113,13 +113,13 @@ namespace Importer.Converters
                         }
                         table.Rows.Add(dr);
                     }
-                    FromTableToData(table);
+                    FromTableToData(data, table);
                 }
-
             }
+            return data;
         }
 
-        private void FromTableToData(DataTable table)
+        private void FromTableToData(List<string[]> data, DataTable table)
         {
             int defaultAmount;
             int.TryParse(config.DefaultAmount, out defaultAmount);
@@ -135,7 +135,6 @@ namespace Importer.Converters
                 }
                 else
                 {
-
                     foreach (var item in amountCols)
                     {
                         var s = row[item - 1].ToString().Replace('-', ' ').Replace('+', ' ').Replace('>', ' ').Replace('.', ',').Trim();
