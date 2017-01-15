@@ -32,6 +32,7 @@
             this.button = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.fileLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label
@@ -66,10 +67,21 @@
             this.fileLabel.TabIndex = 2;
             this.fileLabel.Text = "Не вибрано";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(289, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // PriceSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.fileLabel);
             this.Controls.Add(this.button);
             this.Controls.Add(this.label);
@@ -86,5 +98,6 @@
         private System.Windows.Forms.Button button;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Label fileLabel;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -14,9 +14,13 @@ namespace Importer
         [STAThread]
         static void Main()
         {
+            System.IO.FileInfo file = new System.IO.FileInfo(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Updater.CheckUpdate();
             Application.Run(new MainForm());
+           
         }
     }
 }

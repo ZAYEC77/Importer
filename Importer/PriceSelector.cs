@@ -53,5 +53,12 @@ namespace Importer
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog.Reset();
+            fileLabel.Text = "Не вибрано";
+            filePath = null;
+        }
     }
 }

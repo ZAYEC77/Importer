@@ -22,6 +22,7 @@ namespace Importer
             InitializeComponent();
             settingsForm.MdiParent = this;
             multiPriceForm.MdiParent = this;
+
         }
 
         private void відкритиToolStripMenuItem_Click(object sender, EventArgs e)
