@@ -87,7 +87,7 @@ namespace Importer.Converters
             decimal a = 0;
             Decimal.TryParse(item[4], out a);
             if (a == 0) return null;
-            var s = item[3].ToString().Replace(".", ",");
+            var s = item[3].ToString().Replace(".", ",").Replace("EUR","").Trim();
             if (s == "") return null;
             item[4] = Math.Round(a).ToString();
             double price;

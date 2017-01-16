@@ -1,0 +1,1119 @@
+<?xml version="1.0"?>
+<App xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CrossReplace>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="CrossReplace" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="CrossReplace">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Src" type="xs:string" minOccurs="0" />
+                  <xs:element name="Dest" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+      <DocumentElement>
+        <CrossReplace diffgr:id="CrossReplace1" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+          <Src>FEBI</Src>
+          <Dest>FEBI 2</Dest>
+        </CrossReplace>
+      </DocumentElement>
+    </diffgr:diffgram>
+  </CrossReplace>
+  <Prices>
+    <Price>
+      <Title>Еліт</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>4</NameCol>
+      <PriceCol>6</PriceCol>
+      <VendorCol>3</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>1</BeginWith>
+      <AmountCol>7,8</AmountCol>
+      <AvailabilityCol>1</AvailabilityCol>
+      <CodeCol>2</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>TH
+KH
+AVX
+ZN</Prefixes>
+      <Suffixes />
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>elit.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Автотехнікс</Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>3</NameCol>
+      <PriceCol>4</PriceCol>
+      <VendorCol>1</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>5</AmountCol>
+      <AvailabilityCol>2</AvailabilityCol>
+      <CodeCol>2</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>AD
+AE
+TH
+3M
+AD
+AE
+AH
+AJ
+BO
+BM
+BL
+BU
+ZI
+ZN
+ZF
+CG
+CH
+CI
+3M
+AD
+AE
+AH
+AJ
+BO
+BM
+BL
+BU
+CG
+CH
+CI
+TH
+AI
+B
+DL
+DS
+EL
+EP
+ERT
+FE
+FO
+GL
+GO
+GT
+HL
+KS
+KY
+LK
+LM
+LP
+MF
+MH
+MN
+MO
+MT
+NG
+NI
+NK
+NP
+PR
+QB
+RU
+SF
+SH
+SK
+SN
+SW
+VL
+AD
+TH
+555</Prefixes>
+      <RemoveAllPrefixes>true</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>autotech.txt</FileName>
+      <BrandExtra>555 4
+DEPO_ES 4
+FITSHI 4
+GOMET 4
+KROON OIL 4
+PROFIT 4</BrandExtra>
+    </Price>
+    <Price>
+      <Title>Інтеркарс</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>3</NameCol>
+      <PriceCol>6</PriceCol>
+      <VendorCol>4</VendorCol>
+      <SheetNumber>1,2,3</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>5</AmountCol>
+      <CodeCol>2</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>FE
+LMI
+EL
+TH
+EVR
+KYB
+SW
+HP
+LPR
+QB
+AD
+VR
+LE
+OPT
+FAG
+3M
+AD
+AE
+AH
+AJ
+BO
+BM
+BL
+BU
+CG
+CH
+CI
+TH
+AI
+CX
+DL
+DS
+EL
+EP
+ERT
+FE
+FO
+GL
+GO
+GT
+HL
+KS
+KY
+LK
+LM
+LP
+MF
+MH
+MN
+MO
+MT
+NG
+NI
+NK
+NP
+PR
+QB
+RU
+SF
+SH
+SK
+SN
+SW
+VL
+AD
+TH
+CO
+SAS
+DAF
+VAL
+BOS
+DAY
+OPT
+AUG
+MG
+FAE
+RL
+BS
+MON
+OSR
+HU</Prefixes>
+      <Suffixes>OECO
+ECO
+WIX</Suffixes>
+      <RemoveAllPrefixes>true</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>intercars.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Юник Трейд</Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>2</NameCol>
+      <PriceCol>9</PriceCol>
+      <VendorCol>3</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>7</AmountCol>
+      <CodeCol>1</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>AD
+SAS
+FE
+LPR
+LMI
+FAE
+EVR
+CO
+ERT
+AIR
+VL
+MM
+DZ
+OSR
+MN
+DY
+GT
+BR
+PF
+NRF
+AJ</Prefixes>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>uniqtraide.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Владислав </Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>8</NameCol>
+      <PriceCol>5</PriceCol>
+      <VendorCol>2</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>6</AmountCol>
+      <CodeCol>4</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>TH
+PCA
+DCA
+EX
+EG</Prefixes>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>28</Rate>
+      <FileName>vladislav.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Автотехникс 1</Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>3</NameCol>
+      <PriceCol>4</PriceCol>
+      <VendorCol>1</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>6</AmountCol>
+      <CodeCol>2</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>3M
+AD
+AE
+AH
+AJ
+BO
+BM
+BL
+BU
+CG
+CH
+CI
+VR
+AD
+TH
+3M
+AD
+AE
+AH
+AJ
+BO
+BM
+BL
+BU
+ZI
+ZN
+ZF
+CG
+CH
+CI
+3M
+AD
+AE
+AH
+AJ
+BO
+BM
+BL
+BU
+CG
+CH
+CI
+TH
+AI
+B
+DL
+DS
+EL
+EP
+ERT
+FE
+FO
+GL
+GO
+GT
+HL
+KS
+KY
+LK
+LM
+LP
+MF
+MH
+MN
+MO
+MT
+NG
+NI
+NK
+NP
+PR
+QB
+RU
+SF
+SH
+SK
+SN
+SW
+VL
+AD
+B
+TH
+TH
+AI
+B
+DL
+DS
+EL
+EP
+ERT
+FE
+FO
+GL
+GO
+GT
+HL
+KS
+KY
+LK
+LM
+LP
+MF
+MH
+MN
+MO
+MT
+NG
+NI
+NK
+NP
+PR
+QB
+RU
+SF
+SH
+SK
+SN
+SW
+VL
+AD
+TH
+555</Prefixes>
+      <RemoveAllPrefixes>true</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>autotech1.txt</FileName>
+      <BrandExtra>555 4
+DEPO_ES 4
+FITSHI 4
+GOMET 4
+KROON OIL 4
+PROFIT 4</BrandExtra>
+    </Price>
+    <Price>
+      <Title>Омега Харьков</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>4</NameCol>
+      <PriceCol>7</PriceCol>
+      <VendorCol>1</VendorCol>
+      <SheetNumber>2</SheetNumber>
+      <BeginWith>3</BeginWith>
+      <AmountCol>9</AmountCol>
+      <CodeCol>3</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>TH
+EX</Prefixes>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>omega2.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Автотехникс 2 дня</Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>3</NameCol>
+      <PriceCol>4</PriceCol>
+      <VendorCol>1</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>7,8</AmountCol>
+      <CodeCol>2</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>3M
+AD
+AE
+AH
+AJ
+BO
+BM
+BL
+BU
+CG
+CH
+CI
+DL
+DS
+EL
+EP
+ERT
+FE
+FO
+GL
+GO
+GT
+HL
+KS
+KY
+LK
+LM
+LP
+MF
+MH
+MN
+MO
+MT
+NG
+NI
+NK
+NP
+PR
+QB
+RU
+SF
+SH
+SK
+SN
+SW
+VL</Prefixes>
+      <RemoveAllPrefixes>true</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>autotech2.txt</FileName>
+      <BrandExtra>555 4
+DEPO_ES 4
+FITSHI 4
+GOMET 4
+KROON OIL 4
+PROFIT 4</BrandExtra>
+    </Price>
+    <Price>
+      <Title>Юник Трейд 1 день</Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>2</NameCol>
+      <PriceCol>9</PriceCol>
+      <VendorCol>3</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>4,5,6,8</AmountCol>
+      <CodeCol>1</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>AD
+SAS
+FE
+LPR
+LMI
+FAE
+EVR
+CO
+ERT
+WA
+AIR
+VL</Prefixes>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>uniqtraide1.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Владислав 1 день</Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>8</NameCol>
+      <PriceCol>5</PriceCol>
+      <VendorCol>2</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>7</AmountCol>
+      <CodeCol>4</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>TH
+PCA
+DCA
+EX
+EG</Prefixes>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>28</Rate>
+      <FileName>vladislav1.txt </FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Азиан Партс</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>4</NameCol>
+      <PriceCol>7</PriceCol>
+      <VendorCol>3</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol />
+      <CodeCol>1</CodeCol>
+      <Coeficients>0 70 40
+70 100 21
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Suffixes>_KOY
+_NS1K
+_MRK
+_NTN
+_KBC
+_OEM
+_GMB
+_DAJ
+_DAO
+_PYU
+_POS
+_DNP
+_DET
+_MBS
+_SAY
+_TCI
+_NON
+_SAM
+_GAT
+_POS
+_INZ
+_SHW
+_TCI
+_PYU
+_HSC
+_DK
+_SKF
+_APK
+_SH
+_IST
+_YUL
+_NON
+_FLA
+_SHW
+_PH
+_DOW
+_HSC
+_IST
+_ADD
+_DNP
+_APK
+_ANA
+_KOS
+_APK
+_ADD
+_KFM
+_KPR
+_SEO
+_HSC
+_AUM
+_ANJ
+_SAY
+_AUM
+_TIM
+_SHW
+_JIN
+_APG
+_HSC
+_ANA
+_IST
+_FLA
+_POS
+_ILJ
+_DAC
+_REM
+_FLA
+_KGK
+_AUM
+_NGK
+_ADD
+_GMP
+_KFM
+_PYU
+_PH
+_NON
+_DK
+_WOS
+_YAN
+_DK
+_WOO
+_ANJ
+_SHI
+_ADD
+_OEM
+_POS
+_KEU
+_GK
+_I-F
+_SWF
+_AZT
+_HSC
+_INA
+_SOL
+_SAM
+_DOW
+_HVC
+_INZ
+_HVC
+_DYC
+_NSK
+_CT
+_DON
+_BAN
+_AUT
+_NTK
+_COL
+_HCC
+_HYC
+_FYC
+_HNH
+_FYC
+_TAE
+_JSC
+_BER
+_HNH
+_DYG
+_VAL
+_MAN
+_SKY
+_REA
+_SUH
+_DAW
+_BOS
+_SUH
+_MIR
+_VAP
+_FYC
+_BK
+_VAL
+_VAP
+_GOL
+_ZET
+_KEF
+_COT
+_DEN
+_NBN
+_SEC
+_INF
+_DAE
+_TOY
+_ATK
+_X2
+_FAG
+_BP
+_CIK
+_X2
+_DOO
+_ONN
+-B
+_KIL
+_SHO
+_KOB
+_BEH
+_DY
+_DEL
+_MUN
+_Z-P
+_DEL
+_SHA
+_FSH
+_BRI
+_STD
+_FOR
+_KGC
+_DMI
+_GCC
+_BIN
+_FRC
+_BP
+_KCC
+_GOO
+_AMZ
+_ZEN
+_ECO
+_JEI
+_RAA
+_KGS
+_BS
+_SL
+_RAA
+_DPL
+_POO
+_RAA
+_HIK
+_KAF
+_WIN
+_DEP
+_RAA
+_BS
+_AMA
+</Suffixes>
+      <RemoveAllPrefixes>true</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>27.1</Rate>
+      <FileName>Azia parts.txt</FileName>
+      <DefaultAmount>2</DefaultAmount>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Еліт 2 дня</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>4</NameCol>
+      <PriceCol>6</PriceCol>
+      <VendorCol>3</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>9</AmountCol>
+      <CodeCol>2</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>TH
+KH
+AVX
+ZN</Prefixes>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>elit2.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>ADN 2 дня</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>5</NameCol>
+      <PriceCol>7</PriceCol>
+      <VendorCol>4</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>6</AmountCol>
+      <CodeCol>3</CodeCol>
+      <Coeficients>0 70 50
+70 100 25
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>adn2.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>ASG</Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>4</NameCol>
+      <PriceCol>6</PriceCol>
+      <VendorCol>7</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>1</BeginWith>
+      <AmountCol>5</AmountCol>
+      <CodeCol>8</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>="
+AD
+SAS
+FE
+LPR
+LMI
+FAE
+EVR
+CO
+ERT
+AIR
+VL
+MM
+DZ
+OSR
+MN
+DY
+GT
+BR
+PF
+NRF
+AJ
+AVX</Prefixes>
+      <RemoveAllPrefixes>true</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>asg.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>токо кардс</Title>
+      <Format>DBF</Format>
+      <Extras />
+      <NameCol>10</NameCol>
+      <PriceCol>2</PriceCol>
+      <VendorCol>8</VendorCol>
+      <BeginWith>1</BeginWith>
+      <AmountCol>3</AmountCol>
+      <CodeCol>1</CodeCol>
+      <Coeficients>0 70 100
+70 100 100
+100 200 40
+200 500 20
+500 1000 9
+1000 99999 7</Coeficients>
+      <RemoveAllPrefixes>true</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <NewBrand>toko cars</NewBrand>
+      <Rate>1</Rate>
+      <FileName>toko kars.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Омега</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>4</NameCol>
+      <PriceCol>7</PriceCol>
+      <VendorCol>1</VendorCol>
+      <SheetNumber>2</SheetNumber>
+      <BeginWith>3</BeginWith>
+      <AmountCol>8</AmountCol>
+      <CodeCol>3</CodeCol>
+      <Coeficients>0 70 40
+70 100 22
+100 200 16
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <Prefixes>TH
+EX</Prefixes>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>omega.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>AND</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>5</NameCol>
+      <PriceCol>7</PriceCol>
+      <VendorCol>4</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>6</AmountCol>
+      <CodeCol>3</CodeCol>
+      <Coeficients>0 70 50
+70 100 25
+100 200 18
+200 500 8
+500 1000 6
+1000 99999 5</Coeficients>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+      <FileName>adn.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Форма партс</Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>7</NameCol>
+      <PriceCol>3</PriceCol>
+      <VendorCol>4</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>2</AmountCol>
+      <CodeCol>1</CodeCol>
+      <Coeficients>0 70 100
+70 100 100
+100 200 40
+200 500 20
+500 1000 9
+1000 99999 7</Coeficients>
+      <Prefixes>="</Prefixes>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>true</ReplaceBrand>
+      <NewBrand>Fps</NewBrand>
+      <Rate>1</Rate>
+      <FileName>fps.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>Альт стар</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>1</NameCol>
+      <PriceCol>6</PriceCol>
+      <VendorCol>3</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>1</BeginWith>
+      <AmountCol>7</AmountCol>
+      <CodeCol>2</CodeCol>
+      <Coeficients>0 100 100
+100 200 40
+200 500 20
+500 1000 11
+1000 99999 11</Coeficients>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>28.7</Rate>
+      <FileName>alitstar.txt</FileName>
+      <BrandExtra />
+    </Price>
+    <Price>
+      <Title>SCAR</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>4</NameCol>
+      <PriceCol>5</PriceCol>
+      <VendorCol>3</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>18</BeginWith>
+      <AmountCol>7,9</AmountCol>
+      <CodeCol>2</CodeCol>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>true</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>31</Rate>
+      <FileName>scar.txt</FileName>
+      <DefaultAmount>2</DefaultAmount>
+    </Price>
+  </Prices>
+  <Host>ftp://sky-auto.com.ua</Host>
+  <User>sky-auto</User>
+  <Pass>5ef16c90-7650-4076-b109-57ca96e8a28b</Pass>
+</App>

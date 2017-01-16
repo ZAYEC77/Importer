@@ -140,8 +140,7 @@ namespace Importer.Converters
                         Double _amount;
                         if (row[item - 1].ToString().Trim() == "есть")
                         {
-                            Double.TryParse(config.DefaultAmount, out _amount);
-                            amount = _amount;
+                            amount = defaultAmount;
                             break;
                         }
                         var s = row[item - 1].ToString().Replace('-', ' ').Replace('+', ' ').Replace('>', ' ').Replace('.', ',').Trim();
