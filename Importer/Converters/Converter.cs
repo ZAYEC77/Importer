@@ -94,8 +94,7 @@ namespace Importer.Converters
             Double.TryParse(s, out price);
             price *= this.Rate;
             var coef = UseCoeficients ? config.GetExtraByBrand(item[2]) + getEf(price) : 0;
-            price = price * ((100 + coef) / 100);
-            price = price * ((100 - config.getSubPercent()) / 100);
+            price = price * ((100.0 + coef - config.getSubPercent()) / 100);
             if (price == 0) return null;
             if (config.RoundPrice)
             {
