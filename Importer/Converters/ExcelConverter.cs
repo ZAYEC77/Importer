@@ -80,6 +80,10 @@ namespace Importer.Converters
                     table = new DataTable();
                     ISheet sheet = hssfworkbook.GetSheetAt(sheetNumb - 1);
                     IRow headerRow = sheet.GetRow(0);
+                    if (headerRow.Cells.Count == 0)
+                    {
+                        headerRow = sheet.GetRow(1);
+                    }
                     IEnumerator rows = sheet.GetRowEnumerator();
 
                     int colCount = headerRow.LastCellNum;
