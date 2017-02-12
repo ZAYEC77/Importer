@@ -91,7 +91,7 @@ namespace Importer.Cross
             {
                 Object[] arr = ((System.Data.DataRow)row).ItemArray;
                 string codeCol = arr[config.CodeCol - 1].ToString();
-                string brandCol = arr[config.BrandCol - 1].ToString();
+                string brandCol = ReplaceBrand(arr[config.BrandCol - 1].ToString());
                 string nameCol = arr[config.NameCol - 1].ToString();
                 string destCodeCol = arr[config.DestCodeCol - 1].ToString();
                 string destBrandCol = ReplaceBrand(arr[config.DestBrandCol - 1].ToString());
