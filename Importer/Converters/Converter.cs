@@ -87,7 +87,7 @@ namespace Importer.Converters
             decimal a = 0;
             Decimal.TryParse(item[4], out a);
             if (a == 0) return null;
-            var s = item[3].ToString().Replace(".", ",").Replace("EUR","").Trim();
+            var s = item[3].ToString().Replace(".", ",").Replace("EUR", "").Replace("$", "").Trim();
             if (s == "") return null;
             item[4] = Math.Round(a).ToString();
             double price;
@@ -128,7 +128,7 @@ namespace Importer.Converters
             csv = new StreamWriter(csvFile, Encoding.GetEncoding("windows-1251"));
             csv.WriteLine("Код;Назва;Виробник;Ціна;Кількість");
 
-            for (int i = 1; i < data.Count; i++)
+            for (int i = 0; i < data.Count; i++)
             {
                 var item = ProcessItem(data[i]);
                 if (item == null)
@@ -169,7 +169,7 @@ namespace Importer.Converters
                 headCell.SetCellValue("Кількість");
 
                 int k = 1;
-                for (int i = 1; i < data.Count; i++)
+                for (int i = 0; i < data.Count; i++)
                 {
                     var item = ProcessItem(data[i]);
                     if (item == null)
