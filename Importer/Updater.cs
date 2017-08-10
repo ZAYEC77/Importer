@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using System.Net.Cache;
 using System.Windows.Forms;
 
 namespace Importer
@@ -77,8 +78,9 @@ namespace Importer
 
         private int GetRemoteVersion()
         {
+            RequestCachePolicy policy = new RequestCachePolicy(RequestCacheLevel.NoCacheNoStore);
             var webRequest = WebRequest.Create(@"https://raw.githubusercontent.com/ZAYEC77/Importer/master/Repository/version.dat");
-
+            WebRequest.DefaultCachePolicy = policy;
             var version = 0;
             using (var response = webRequest.GetResponse())
             using (var content = response.GetResponseStream())
