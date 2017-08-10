@@ -57,6 +57,8 @@ namespace Importer
         protected void DownloadApp()
         {
             WebClient webClient = new WebClient();
+            RequestCachePolicy policy = new RequestCachePolicy(RequestCacheLevel.NoCacheNoStore);
+            webClient.CachePolicy = policy;
             var localPath = GetNewFilePath();
             webClient.DownloadFile(@"https://raw.githubusercontent.com/ZAYEC77/Importer/master/Repository/Importer.exe", localPath);
         }
