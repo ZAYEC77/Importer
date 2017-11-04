@@ -79,10 +79,11 @@ namespace Importer.Converters
                 {
                     table = new DataTable();
                     ISheet sheet = hssfworkbook.GetSheetAt(sheetNumb - 1);
-                    IRow headerRow = sheet.GetRow(0);
+                    int beginWith = Convert.ToInt32(this.config.BeginWith);
+                    IRow headerRow = sheet.GetRow(beginWith);
                     if (headerRow.Cells.Count == 0)
                     {
-                        headerRow = sheet.GetRow(1);
+                        headerRow = sheet.GetRow(beginWith + 1);
                     }
                     IEnumerator rows = sheet.GetRowEnumerator();
 
