@@ -33,6 +33,10 @@ namespace Importer.Converters
             for (int i = beginFrom; i < table.Rows.Count; i++)
             {
                 var row = table.Rows[i];
+                if (!config.IsValidRow(row))
+                {
+                    continue;
+                }
                 double amount = 0;
                 foreach (var item in amountCols)
                 {

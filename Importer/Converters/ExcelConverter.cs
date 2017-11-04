@@ -133,7 +133,12 @@ namespace Importer.Converters
             for (int i = System.Convert.ToInt32(config.BeginWith); i < table.Rows.Count; i++)
             {
                 var row = table.Rows[i];
-                double amount = 0;
+
+                if (!config.IsValidRow(row))
+                {
+                    continue;
+                }
+                    double amount = 0;
                 if (amountCols.Count == 0)
                 {
                     amount = defaultAmount;
@@ -156,13 +161,13 @@ namespace Importer.Converters
                 }
                 if (amount > 0)
                 {
-                    data.Add(new string[] {
-                    row[System.Convert.ToInt32(config.CodeCol)-1].ToString(),
-                    row[System.Convert.ToInt32(config.NameCol)-1].ToString(),
-                    row[System.Convert.ToInt32(config.VendorCol)-1].ToString(),
-                    row[System.Convert.ToInt32(config.PriceCol)-1].ToString(),
-                    amount.ToString()
-                });
+                        data.Add(new string[] {
+                        row[System.Convert.ToInt32(config.CodeCol)-1].ToString(),
+                        row[System.Convert.ToInt32(config.NameCol)-1].ToString(),
+                        row[System.Convert.ToInt32(config.VendorCol)-1].ToString(),
+                        row[System.Convert.ToInt32(config.PriceCol)-1].ToString(),
+                        amount.ToString()
+                    });
                 }
             }
         }

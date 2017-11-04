@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -13,6 +14,7 @@ namespace Importer
     {
         protected string[] _prefixes = null;
         protected string[] _suffixes = null;
+        protected List<Tuple<int, string>> _additionalConditions = new List<Tuple<int, string>>();
         protected Dictionary<String, Double> _brandExtra = new Dictionary<string, double>();
 
         public string Title { get; set; }
@@ -39,6 +41,7 @@ namespace Importer
         public string FileName { get; set; }
         public string DefaultAmount { get; set; }
         public string BrandExtra { get; set; }
+        public string AdditionalConditions { get; set; }
 
         public Price()
         {
@@ -119,6 +122,18 @@ namespace Importer
             return result;
         }
 
+        public bool IsValidRow(DataRow row)
+        {
+            foreach (Tuple<int, string> condition in _additionalConditions)
+            {
+                if (row[condition.Item1-1].ToString() != condition.Item2)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         public void Init()
         {
             if (Prefixes == null)
@@ -128,6 +143,18 @@ namespace Importer
             else
             {
                 _prefixes = Prefixes.Replace("\n", "").Split('\r');
+            }
+            if (AdditionalConditions != null)
+            {
+                var tmpList = AdditionalConditions.Replace("\n", "").Split('\r');
+                foreach (var item in tmpList)
+                {
+                    var parts = item.Split('=');
+                    if (parts.Length == 2)
+                    {
+                        _additionalConditions.Add(new Tuple<int, string>(Convert.ToInt32(parts[0]), parts[1]));
+                    }
+                }
             }
             if (Suffixes == null)
             {
