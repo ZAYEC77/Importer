@@ -27,10 +27,9 @@ namespace Importer.Converters
             }
 
             var table = ConvertCSVtoDataTable(fileName);
+           
 
-            var beginFrom = System.Convert.ToInt32(config.BeginWith);
-
-            for (int i = beginFrom; i < table.Rows.Count; i++)
+            for (int i = 0; i < table.Rows.Count; i++)
             {
                 var row = table.Rows[i];
                 if (!config.IsValidRow(row))
@@ -67,13 +66,19 @@ namespace Importer.Converters
             return source;
 
         }
-        public static DataTable ConvertCSVtoDataTable(string strFilePath)
+        public DataTable ConvertCSVtoDataTable(string strFilePath)
         {
             DataTable dt = new DataTable();
             using (StreamReader sr = new StreamReader(strFilePath, win1251))
             {
                 char delimiter = '\t';
-                string[] headers = sr.ReadLine().Split(delimiter);
+                int beginWith = Convert.ToInt32(this.config.BeginWith);
+                string[] headers;
+                headers = sr.ReadLine().Split(delimiter);
+                for (int i = 0; i < beginWith-2; i++)
+                {
+                    headers = sr.ReadLine().Split(delimiter);
+                }
                 if (headers.Length == 1)
                 {
                     delimiter = ';';

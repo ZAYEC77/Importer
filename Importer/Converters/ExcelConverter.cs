@@ -12,6 +12,8 @@ using System.IO;
 using NPOI.XSSF.UserModel;
 using NPOI.SS.UserModel;
 using System.Collections;
+using NPOI.HSSF.UserModel;
+using NPOI.POIFS.FileSystem;
 
 namespace Importer.Converters
 {
@@ -48,23 +50,62 @@ namespace Importer.Converters
 
             if (is2003)
             {
-                var connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";Extended Properties=\"Excel 12.0;IMEX=1;HDR=NO;TypeGuessRows=0;ImportMixedTypes=Text\""; ;
-                var conn = new OleDbConnection(connectionString);
-                conn.Open();
-                using (conn)
+                using (StreamReader input = new StreamReader(fileName))
                 {
-
-                    var sheets = conn.GetOleDbSchemaTable(System.Data.OleDb.OleDbSchemaGuid.Tables, new object[] { null, null, null, "TABLE" });
-                    using (var cmd = conn.CreateCommand())
+                    IWorkbook workbook = new HSSFWorkbook(new POIFSFileSystem(input.BaseStream));
+                    if (null == workbook)
                     {
-                        cmd.CommandText = "SELECT * FROM [" + sheets.Rows[0]["TABLE_NAME"].ToString() + "] ";
-
-                        var adapter = new OleDbDataAdapter(cmd);
-                        var ds = new DataSet();
-                        adapter.Fill(ds);
-                        table = ds.Tables[System.Convert.ToInt32(config.SheetNumber) - 1];
+                        throw new Exception("Can\'t load excel file");
                     }
-                    FromTableToData(data, table);
+
+                    Console.WriteLine();
+
+                    foreach (var sheetNumb in sheetNumbs)
+                    {
+                        table = new DataTable();
+
+                        ISheet sheet = workbook.GetSheetAt(sheetNumb - 1);
+                        int beginWith = Convert.ToInt32(this.config.BeginWith);
+                        IRow headerRow = sheet.GetRow(beginWith);
+                        if (headerRow.Cells.Count == 0)
+                        {
+                            headerRow = sheet.GetRow(beginWith + 1);
+                        }
+                        IEnumerator rows = sheet.GetRowEnumerator();
+
+                        int colCount = headerRow.LastCellNum;
+                        int rowCount = sheet.LastRowNum;
+                        for (int c = 0; c < colCount; c++)
+                        {
+                            var cell = headerRow.GetCell(c);
+                            if (cell == null)
+                            {
+                                table.Columns.Add("Col_" + c);
+                            }
+                            else
+                            {
+                                table.Columns.Add(cell.ToString());
+                            }
+                        }
+
+                        while (rows.MoveNext())
+                        {
+                            IRow row = (HSSFRow)rows.Current;
+                            DataRow dr = table.NewRow();
+
+                            for (int i = 0; i < colCount; i++)
+                            {
+                                ICell cell = row.GetCell(i);
+
+                                if (cell != null)
+                                {
+                                    dr[i] = cell.ToString();
+                                }
+                            }
+                            table.Rows.Add(dr);
+                        }
+                        FromTableToData(data, table);
+                    }
                 }
             }
             else
@@ -138,7 +179,7 @@ namespace Importer.Converters
                 {
                     continue;
                 }
-                    double amount = 0;
+                double amount = 0;
                 if (amountCols.Count == 0)
                 {
                     amount = defaultAmount;
