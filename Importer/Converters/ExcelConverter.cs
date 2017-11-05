@@ -14,6 +14,7 @@ using NPOI.SS.UserModel;
 using System.Collections;
 using NPOI.HSSF.UserModel;
 using NPOI.POIFS.FileSystem;
+using System.Globalization;
 
 namespace Importer.Converters
 {
@@ -58,6 +59,8 @@ namespace Importer.Converters
                         throw new Exception("Can\'t load excel file");
                     }
 
+                    HSSFFormulaEvaluator.EvaluateAllFormulaCells(workbook);
+
                     Console.WriteLine();
 
                     foreach (var sheetNumb in sheetNumbs)
@@ -66,6 +69,7 @@ namespace Importer.Converters
 
                         ISheet sheet = workbook.GetSheetAt(sheetNumb - 1);
                         int beginWith = Convert.ToInt32(this.config.BeginWith);
+                        beginWith = (beginWith == 0) ? 0 : (beginWith - 1);
                         IRow headerRow = sheet.GetRow(beginWith);
                         if (headerRow.Cells.Count == 0)
                         {
@@ -77,15 +81,7 @@ namespace Importer.Converters
                         int rowCount = sheet.LastRowNum;
                         for (int c = 0; c < colCount; c++)
                         {
-                            var cell = headerRow.GetCell(c);
-                            if (cell == null)
-                            {
-                                table.Columns.Add("Col_" + c);
-                            }
-                            else
-                            {
-                                table.Columns.Add(cell.ToString());
-                            }
+                            table.Columns.Add("Col_" + c);
                         }
 
                         while (rows.MoveNext())
@@ -114,6 +110,7 @@ namespace Importer.Converters
                 using (FileStream file = new FileStream(fileName, FileMode.Open, FileAccess.Read))
                 {
                     hssfworkbook = new XSSFWorkbook(file);
+                    XSSFFormulaEvaluator.EvaluateAllFormulaCells(hssfworkbook);
                 }
 
                 foreach (var sheetNumb in sheetNumbs)
@@ -121,6 +118,7 @@ namespace Importer.Converters
                     table = new DataTable();
                     ISheet sheet = hssfworkbook.GetSheetAt(sheetNumb - 1);
                     int beginWith = Convert.ToInt32(this.config.BeginWith);
+                    beginWith = (beginWith == 0) ? 0 : (beginWith - 1);
                     IRow headerRow = sheet.GetRow(beginWith);
                     if (headerRow.Cells.Count == 0)
                     {
@@ -132,15 +130,7 @@ namespace Importer.Converters
                     int rowCount = sheet.LastRowNum;
                     for (int c = 0; c < colCount; c++)
                     {
-                        var cell = headerRow.GetCell(c);
-                        if (cell == null)
-                        {
-                            table.Columns.Add("Col_" + c);
-                        }
-                        else
-                        {
-                            table.Columns.Add(cell.ToString());
-                        }
+                        table.Columns.Add("Col_" + c);
                     }
 
                     while (rows.MoveNext())
@@ -154,7 +144,17 @@ namespace Importer.Converters
 
                             if (cell != null)
                             {
-                                dr[i] = cell.ToString();
+                                if (cell.CellType == CellType.Formula)
+                                {
+
+                                    DataFormatter dataFormatter = new DataFormatter(CultureInfo.CurrentCulture);
+                                    var val = dataFormatter.FormatCellValue(cell);
+                                    dr[i] = cell.NumericCellValue.ToString();
+                                }
+                                else
+                                {
+                                    dr[i] = cell.ToString();
+                                }
                             }
                         }
                         table.Rows.Add(dr);
