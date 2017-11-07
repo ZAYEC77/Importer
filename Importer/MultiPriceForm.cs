@@ -71,7 +71,7 @@ namespace Importer
                             try
                             {
                                 MultipleConverterLog(String.Format("Початок конвертації прайсу {0} в CSV", config.Title));
-                                converter.UseCoeficients = true;
+                                converter.UseCoeficients = false;
                                 converter.SaveCsv(converter.LoadData(), sitePath);
                                 MultipleConverterLog(String.Format("Завершення конвертації прайсу {0} в CSV", config.Title));
                             }
