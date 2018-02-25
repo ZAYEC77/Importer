@@ -37,7 +37,7 @@ namespace Importer.Cross
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sd = new SaveFileDialog() { FileName = Path.ChangeExtension(converter.FileName, ".xlsx") };
+            SaveFileDialog sd = new SaveFileDialog() { FileName = Path.ChangeExtension(converter.FileName, ".xls") };
             if (sd.ShowDialog() == DialogResult.OK)
             {
                 converter.Convert(config, sd.FileName);

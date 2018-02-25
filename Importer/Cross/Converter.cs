@@ -8,6 +8,7 @@ using NPOI.SS.UserModel;
 using System.IO;
 using System.Data;
 using System.Collections;
+using NPOI.HSSF.UserModel;
 
 namespace Importer.Cross
 {
@@ -85,7 +86,7 @@ namespace Importer.Cross
 
             using (FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write))
             {
-                IWorkbook wb = new XSSFWorkbook();
+                IWorkbook wb = new HSSFWorkbook();
                 ISheet sheet = wb.CreateSheet("Sheet1");
 
                 ICreationHelper cH = wb.GetCreationHelper();
@@ -111,7 +112,6 @@ namespace Importer.Cross
                     string brandCol = ReplaceBrand(arr[config.BrandCol - 1].ToString());
                     string destCodeCol = arr[config.DestCodeCol - 1].ToString();
                     string destBrandCol = ReplaceBrand(arr[config.DestBrandCol - 1].ToString());
-
 
                     if ((codeCol == "") || (brandCol == "") || (destCodeCol == "") || (destBrandCol == ""))
                     {
