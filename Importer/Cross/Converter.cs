@@ -82,30 +82,59 @@ namespace Importer.Cross
         public void Convert(Config config, String fileName)
         {
             StreamWriter csv = new StreamWriter(Stream.Null);
-            var csvFile = new FileStream(fileName, FileMode.Create, FileAccess.Write);
-            csv = new StreamWriter(csvFile, Encoding.GetEncoding("windows-1251"));
 
-            var table = SheetTables[config.SheetNumber];
-
-            foreach (var row in table.Rows)
+            using (FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write))
             {
-                Object[] arr = ((System.Data.DataRow)row).ItemArray;
-                string codeCol = arr[config.CodeCol - 1].ToString();
-                string brandCol = ReplaceBrand(arr[config.BrandCol - 1].ToString());
-                string nameCol = arr[config.NameCol - 1].ToString();
-                string destCodeCol = arr[config.DestCodeCol - 1].ToString();
-                string destBrandCol = ReplaceBrand(arr[config.DestBrandCol - 1].ToString());
+                IWorkbook wb = new XSSFWorkbook();
+                ISheet sheet = wb.CreateSheet("Sheet1");
 
+                ICreationHelper cH = wb.GetCreationHelper();
 
-                if ((codeCol == "") || (brandCol == "") || (nameCol == "") || (destCodeCol == "") || (destBrandCol == ""))
+                IRow firstRow = sheet.CreateRow(0);
+
+                String[] firstLine = { "brand", "code", "brand_from", "code_from", "load_image", "load_characteristics", "load_cross", "load_applicability" };
+
+                for (int i = 0; i < firstLine.Length; i++)
                 {
-                    continue;
+                    ICell headCell = firstRow.CreateCell(i);
+                    headCell.SetCellValue(firstLine[i]);
                 }
 
-                String[] line = { codeCol, brandCol, nameCol, destCodeCol, destBrandCol };
-                csv.WriteLine(String.Join(";", line));
+                var table = SheetTables[config.SheetNumber];
+
+                int k = 1;
+
+                foreach (var row in table.Rows)
+                {
+                    Object[] arr = ((System.Data.DataRow)row).ItemArray;
+                    string codeCol = arr[config.CodeCol - 1].ToString();
+                    string brandCol = ReplaceBrand(arr[config.BrandCol - 1].ToString());
+                    string destCodeCol = arr[config.DestCodeCol - 1].ToString();
+                    string destBrandCol = ReplaceBrand(arr[config.DestBrandCol - 1].ToString());
+
+
+                    if ((codeCol == "") || (brandCol == "") || (destCodeCol == "") || (destBrandCol == ""))
+                    {
+                        continue;
+                    }
+
+                    String[] line = { codeCol, brandCol, destCodeCol, destBrandCol, "1", "1", "1", "1" };
+
+                    IRow excelRow = sheet.CreateRow(k++);
+
+                    for (int j = 0; j <line.Length; j++)
+                    {
+                        ICell cell = excelRow.CreateCell(j);
+                        cell.SetCellValue(line[j]);
+                    }
+                }
+
+                wb.Write(stream);
+
             }
 
+
+            
             csv.Close();
         }
 

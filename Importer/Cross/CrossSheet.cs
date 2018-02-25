@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Importer.Cross
 {
@@ -24,7 +25,6 @@ namespace Importer.Cross
             bindingSource.DataSource = config;
             this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "CodeCol", true));
             this.numericUpDown2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "BrandCol", true));
-            this.numericUpDown3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "NameCol", true));
             this.numericUpDown4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "DestCodeCol", true));
             this.numericUpDown5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource, "DestBrandCol", true));
             dataGridView.DataSource = converter.SheetTables[index];
@@ -37,7 +37,7 @@ namespace Importer.Cross
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sd = new SaveFileDialog() { FileName = converter.FileName.Replace(".xlsx", ".csv") };
+            SaveFileDialog sd = new SaveFileDialog() { FileName = Path.ChangeExtension(converter.FileName, ".xlsx") };
             if (sd.ShowDialog() == DialogResult.OK)
             {
                 converter.Convert(config, sd.FileName);
