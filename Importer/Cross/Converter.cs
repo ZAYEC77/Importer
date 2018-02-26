@@ -126,7 +126,7 @@ namespace Importer.Cross
                         continue;
                     }
 
-                    String[] line = { codeCol, brandCol, destCodeCol, destBrandCol, "1", "1", "1", "1" };
+                    String[] line = { brandCol, codeCol, destBrandCol, destCodeCol, "1", "1", "1", "1" };
 
                     IRow excelRow = sheet.CreateRow(k++);
 
