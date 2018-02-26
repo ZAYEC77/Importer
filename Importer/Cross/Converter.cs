@@ -24,7 +24,15 @@ namespace Importer.Cross
 
         public Converter()
         {
-            crossReplace = App.Instance.CrossReplace.Rows.OfType<DataRow>().ToDictionary(d => d.Field<string>(0).ToUpper(), v => v.Field<object>(1));
+            crossReplace = new Dictionary<string, object>();
+            foreach (DataRow row in App.Instance.CrossReplace.Rows)
+            {
+                string key = row.Field<string>(0).ToUpper();
+                if (!crossReplace.ContainsKey(key))
+                {
+                    crossReplace.Add(key, row.Field<object>(1));
+                }
+            }
         }
 
         public void LoadFile(String fileName)
