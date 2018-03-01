@@ -21,7 +21,7 @@
       <DocumentElement>
         <CrossReplace diffgr:id="CrossReplace1" msdata:rowOrder="0" diffgr:hasChanges="inserted">
           <Src>mb</Src>
-          <Dest>MERCEDES-BENZ</Dest>
+          <Dest>MERCEDES</Dest>
         </CrossReplace>
         <CrossReplace diffgr:id="CrossReplace2" msdata:rowOrder="1" diffgr:hasChanges="inserted">
           <Src>Dello</Src>
@@ -29,15 +29,359 @@
         </CrossReplace>
         <CrossReplace diffgr:id="CrossReplace3" msdata:rowOrder="2" diffgr:hasChanges="inserted">
           <Src>KIA / HYUNDAI</Src>
-          <Dest>HYUNDAI/KIA</Dest>
+          <Dest>HYUNDAI</Dest>
         </CrossReplace>
         <CrossReplace diffgr:id="CrossReplace4" msdata:rowOrder="3" diffgr:hasChanges="inserted">
           <Src>DMC</Src>
-          <Dest>GENERAL MOTORS</Dest>
+          <Dest>GENERALMOTORS</Dest>
         </CrossReplace>
         <CrossReplace diffgr:id="CrossReplace5" msdata:rowOrder="4" diffgr:hasChanges="inserted">
           <Src>BEHR-HELLA</Src>
           <Dest>HELLA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace6" msdata:rowOrder="5" diffgr:hasChanges="inserted">
+          <Src>MERCEDES-BENZ</Src>
+          <Dest>MERCEDES</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace7" msdata:rowOrder="6" diffgr:hasChanges="inserted">
+          <Src>GENERAL MOTORS</Src>
+          <Dest>GENERALMOTORS</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace8" msdata:rowOrder="7" diffgr:hasChanges="inserted">
+          <Src>JP GROUP</Src>
+          <Dest>JPGROUP</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace9" msdata:rowOrder="8" diffgr:hasChanges="inserted">
+          <Src>HYUNDAI/KIA</Src>
+          <Dest>HYUNDAI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace10" msdata:rowOrder="9" diffgr:hasChanges="inserted">
+          <Src>CITROEN/PEUGEOT</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace11" msdata:rowOrder="10" diffgr:hasChanges="inserted">
+          <Src>CITROEN</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace12" msdata:rowOrder="11" diffgr:hasChanges="inserted">
+          <Src>PEUGEOT</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace13" msdata:rowOrder="12" diffgr:hasChanges="inserted">
+          <Src>GM</Src>
+          <Dest>GENERALMOTORS</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace14" msdata:rowOrder="13" diffgr:hasChanges="inserted">
+          <Src>LAND ROVER</Src>
+          <Dest>LANDROVER</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace15" msdata:rowOrder="14" diffgr:hasChanges="inserted">
+          <Src>VIEW MAX</Src>
+          <Dest>VIEWMAX</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace16" msdata:rowOrder="15" diffgr:hasChanges="inserted">
+          <Src>FIAT/ALFA/LANCIA</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace17" msdata:rowOrder="16" diffgr:hasChanges="inserted">
+          <Src>FEBI</Src>
+          <Dest>FEBIBILSTEIN</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace18" msdata:rowOrder="17" diffgr:hasChanges="inserted">
+          <Src>CITROEN_НЕИСПОЛЬЗ</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace19" msdata:rowOrder="18" diffgr:hasChanges="inserted">
+          <Src>AC DELCO</Src>
+          <Dest>ACDELCO</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace20" msdata:rowOrder="19" diffgr:hasChanges="inserted">
+          <Src>BLUE PRINT</Src>
+          <Dest>BLUEPRINT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace21" msdata:rowOrder="20" diffgr:hasChanges="inserted">
+          <Src>BENTLEY</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace22" msdata:rowOrder="21" diffgr:hasChanges="inserted">
+          <Src>FORTUNE LINE</Src>
+          <Dest>FORTUNELINE</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace23" msdata:rowOrder="22" diffgr:hasChanges="inserted">
+          <Src>PORSCHE</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace24" msdata:rowOrder="23" diffgr:hasChanges="inserted">
+          <Src>FISCHER</Src>
+          <Dest>FA1</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace25" msdata:rowOrder="24" diffgr:hasChanges="inserted">
+          <Src>VICTOR REINZ</Src>
+          <Dest>REINZ</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace26" msdata:rowOrder="25" diffgr:hasChanges="inserted">
+          <Src>AUTOFREN</Src>
+          <Dest>AUTOFRENSEINSA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace27" msdata:rowOrder="26" diffgr:hasChanges="inserted">
+          <Src>AUTOFREN SEINSA</Src>
+          <Dest>AUTOFRENSEINSA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace28" msdata:rowOrder="27" diffgr:hasChanges="inserted">
+          <Src>SEINSA</Src>
+          <Dest>AUTOFRENSEINSA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace29" msdata:rowOrder="28" diffgr:hasChanges="inserted">
+          <Src>CHEVROLET</Src>
+          <Dest>GENERALMOTORS</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace30" msdata:rowOrder="29" diffgr:hasChanges="inserted">
+          <Src>KIA</Src>
+          <Dest>HYUNDAI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace31" msdata:rowOrder="30" diffgr:hasChanges="inserted">
+          <Src>DAEWOO</Src>
+          <Dest>GENERALMOTORS</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace32" msdata:rowOrder="31" diffgr:hasChanges="inserted">
+          <Src>VW</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace33" msdata:rowOrder="32" diffgr:hasChanges="inserted">
+          <Src>FIAT</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace34" msdata:rowOrder="33" diffgr:hasChanges="inserted">
+          <Src>SKODA</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace35" msdata:rowOrder="34" diffgr:hasChanges="inserted">
+          <Src>ROVER</Src>
+          <Dest>LANDROVER</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace36" msdata:rowOrder="35" diffgr:hasChanges="inserted">
+          <Src>M14X1.5</Src>
+          <Dest>SSANGYONG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace37" msdata:rowOrder="36" diffgr:hasChanges="inserted">
+          <Src>ALFA ROMEO</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace38" msdata:rowOrder="37" diffgr:hasChanges="inserted">
+          <Src>LEXUS</Src>
+          <Dest>TOYOTA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace39" msdata:rowOrder="38" diffgr:hasChanges="inserted">
+          <Src>PMC</Src>
+          <Dest>PARTSMALL</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace40" msdata:rowOrder="39" diffgr:hasChanges="inserted">
+          <Src>BLUE PRINT</Src>
+          <Dest>BLUEPRINT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace41" msdata:rowOrder="40" diffgr:hasChanges="inserted">
+          <Src>NISSAN/MAZDA</Src>
+          <Dest>NISSAN</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace42" msdata:rowOrder="41" diffgr:hasChanges="inserted">
+          <Src>MAZDA/TOYOTA</Src>
+          <Dest>MAZDA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace43" msdata:rowOrder="42" diffgr:hasChanges="inserted">
+          <Src>NISSAN/VOLKSWAGEN</Src>
+          <Dest>NISSAN</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace44" msdata:rowOrder="43" diffgr:hasChanges="inserted">
+          <Src>MAZDA/NISSAN</Src>
+          <Dest>MAZDA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace45" msdata:rowOrder="44" diffgr:hasChanges="inserted">
+          <Src>SUZUKI/SUBARU</Src>
+          <Dest>SUZUKI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace46" msdata:rowOrder="45" diffgr:hasChanges="inserted">
+          <Src>FIAT/OPEL</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace47" msdata:rowOrder="46" diffgr:hasChanges="inserted">
+          <Src>CITROEN/PEUGEOT/TOYOTA</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace48" msdata:rowOrder="47" diffgr:hasChanges="inserted">
+          <Src>VOLKSWAGEN/AUDI</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace49" msdata:rowOrder="48" diffgr:hasChanges="inserted">
+          <Src>SUZUKI/OPEL</Src>
+          <Dest>SUZUKI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace50" msdata:rowOrder="49" diffgr:hasChanges="inserted">
+          <Src>DAIHATSU/TOYOTA</Src>
+          <Dest>TOYOTA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace51" msdata:rowOrder="50" diffgr:hasChanges="inserted">
+          <Src>OPEL/RENAULT</Src>
+          <Dest>OPEL</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace52" msdata:rowOrder="51" diffgr:hasChanges="inserted">
+          <Src>FIAT/LANCIA</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace53" msdata:rowOrder="52" diffgr:hasChanges="inserted">
+          <Src>VOLKSWAGEN</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace54" msdata:rowOrder="53" diffgr:hasChanges="inserted">
+          <Src>AUDI</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace55" msdata:rowOrder="54" diffgr:hasChanges="inserted">
+          <Src>MERCEDES/VOLKSWAGEN</Src>
+          <Dest>MERCEDES</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace56" msdata:rowOrder="55" diffgr:hasChanges="inserted">
+          <Src>VOLKSWAGEN/AUDI</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace57" msdata:rowOrder="56" diffgr:hasChanges="inserted">
+          <Src>SEAT/VOLKSWAGEN</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace58" msdata:rowOrder="57" diffgr:hasChanges="inserted">
+          <Src>SEAT</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace59" msdata:rowOrder="58" diffgr:hasChanges="inserted">
+          <Src>SEAT/SKODA/VOLKSWAGEN</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace60" msdata:rowOrder="59" diffgr:hasChanges="inserted">
+          <Src>VOLKSWAGEN/AUDI/SKODA</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace61" msdata:rowOrder="60" diffgr:hasChanges="inserted">
+          <Src>AUDI/SKODA</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace62" msdata:rowOrder="61" diffgr:hasChanges="inserted">
+          <Src>VOLKSWAGEN/AUDI</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace63" msdata:rowOrder="62" diffgr:hasChanges="inserted">
+          <Src>MERCEDES/ALFA ROMEO</Src>
+          <Dest>MERCEDES</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace64" msdata:rowOrder="63" diffgr:hasChanges="inserted">
+          <Src>MERCEDES/AUDI</Src>
+          <Dest>MERCEDES</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace65" msdata:rowOrder="64" diffgr:hasChanges="inserted">
+          <Src>ALFA ROMEO</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace66" msdata:rowOrder="65" diffgr:hasChanges="inserted">
+          <Src>BMW/VOLVO</Src>
+          <Dest>BMW</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace67" msdata:rowOrder="66" diffgr:hasChanges="inserted">
+          <Src>CITROEN/FIAT/PEUGEOT/RENAULT/SEAT/ALFA ROMEO</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace68" msdata:rowOrder="67" diffgr:hasChanges="inserted">
+          <Src>FIAT/PEUGEOT/CITROEN</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace69" msdata:rowOrder="68" diffgr:hasChanges="inserted">
+          <Src>PEUGEOT/CITROEN/FIAT/SMART</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace70" msdata:rowOrder="69" diffgr:hasChanges="inserted">
+          <Src>PEUGEOT/OPEL</Src>
+          <Dest>OPEL</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace71" msdata:rowOrder="70" diffgr:hasChanges="inserted">
+          <Src>PEUGEOT/CITROEN</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace72" msdata:rowOrder="71" diffgr:hasChanges="inserted">
+          <Src>CITROEN/FIAT</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace73" msdata:rowOrder="72" diffgr:hasChanges="inserted">
+          <Src>VOLKSWAGEN/SEAT/AUDI</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace74" msdata:rowOrder="73" diffgr:hasChanges="inserted">
+          <Src>PORSCHE</Src>
+          <Dest>VAG</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace75" msdata:rowOrder="74" diffgr:hasChanges="inserted">
+          <Src>FORD/JAGUAR</Src>
+          <Dest>FORD</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace76" msdata:rowOrder="75" diffgr:hasChanges="inserted">
+          <Src>FIAT/LANCIA/ALFA ROMEO</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace77" msdata:rowOrder="76" diffgr:hasChanges="inserted">
+          <Src>RENAULT/PEUGEOT</Src>
+          <Dest>RENAULT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace78" msdata:rowOrder="77" diffgr:hasChanges="inserted">
+          <Src>TOYOTA/DAIHATSU</Src>
+          <Dest>TOYOTA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace79" msdata:rowOrder="78" diffgr:hasChanges="inserted">
+          <Src>CITROEN/PEUGEOT/RENAULT/TALBOT</Src>
+          <Dest>CITROENPEUGEOT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace80" msdata:rowOrder="79" diffgr:hasChanges="inserted">
+          <Src>MITSUBISHI/HYUNDAI</Src>
+          <Dest>MITSUBISHI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace81" msdata:rowOrder="80" diffgr:hasChanges="inserted">
+          <Src>BMW/VOLVO</Src>
+          <Dest>BMW</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace82" msdata:rowOrder="81" diffgr:hasChanges="inserted">
+          <Src>RENAULT/DACIA</Src>
+          <Dest>RENAULT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace83" msdata:rowOrder="82" diffgr:hasChanges="inserted">
+          <Src>OPEL/DAEWOO</Src>
+          <Dest>OPEL</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace84" msdata:rowOrder="83" diffgr:hasChanges="inserted">
+          <Src>FIAT/LADA</Src>
+          <Dest>FIAT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace85" msdata:rowOrder="84" diffgr:hasChanges="inserted">
+          <Src>ALFA ROMEO/AUSTIN</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace86" msdata:rowOrder="85" diffgr:hasChanges="inserted">
+          <Src>ROVER/HONDA</Src>
+          <Dest>HONDA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace87" msdata:rowOrder="86" diffgr:hasChanges="inserted">
+          <Src>HONDA/ROVER</Src>
+          <Dest>HONDA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace88" msdata:rowOrder="87" diffgr:hasChanges="inserted">
+          <Src>MAZDA/KIA</Src>
+          <Dest>MAZDA</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace89" msdata:rowOrder="88" diffgr:hasChanges="inserted">
+          <Src>RENAULT/DACIA</Src>
+          <Dest>RENAULT</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace90" msdata:rowOrder="89" diffgr:hasChanges="inserted">
+          <Src>FIAT/LANCIA/ALFA ROMEO</Src>
+          <Dest>ALFAROMEFIATLANCI</Dest>
+        </CrossReplace>
+        <CrossReplace diffgr:id="CrossReplace91" msdata:rowOrder="90" diffgr:hasChanges="inserted">
+          <Src>SUZUKI/MARUTI</Src>
+          <Dest>SUZUKI</Dest>
         </CrossReplace>
       </DocumentElement>
     </diffgr:diffgram>
@@ -54,12 +398,13 @@
       <BeginWith>2</BeginWith>
       <AmountCol>5</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 70 40
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
+200 500 9
+500 1000 7
+1000 99999 6
+</Coeficients>
       <Prefixes>FE
 LMI
 EL
@@ -169,12 +514,12 @@ ZF</Suffixes>
       <BeginWith>2</BeginWith>
       <AmountCol>7</AmountCol>
       <CodeCol>1</CodeCol>
-      <Coeficients>0 70 40
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
+200 500 9
+500 1000 7
+1000 99999 6</Coeficients>
       <Prefixes>AD
 SAS
 FE
@@ -213,22 +558,21 @@ AJ</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>6</AmountCol>
       <CodeCol>4</CodeCol>
-      <Coeficients>0 70 40
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
+200 500 9
+500 1000 7
+1000 99999 6</Coeficients>
       <Prefixes>TH
 PCA
 DCA
-EX
 EG</Prefixes>
       <Suffixes>AP</Suffixes>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
-      <Rate>31,8</Rate>
+      <Rate>34,2</Rate>
       <FileName>vladislav.txt</FileName>
     </Price>
     <Price>
@@ -242,12 +586,12 @@ EG</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>6</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 70 40
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
+200 500 9
+500 1000 7
+1000 99999 6</Coeficients>
       <Prefixes>3M
 DLZ
 FEB
@@ -354,13 +698,14 @@ VR
 WX
 CR
 ZI
-ZF</Prefixes>
+ZF
+PH</Prefixes>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
       <Rate>1</Rate>
       <FileName>autotech1.txt</FileName>
-      <BrandExtra>PROFIT 10
+      <BrandExtra>PROFIT 5
 FPS 5</BrandExtra>
     </Price>
     <Price>
@@ -374,14 +719,13 @@ FPS 5</BrandExtra>
       <BeginWith>3</BeginWith>
       <AmountCol>9</AmountCol>
       <CodeCol>3</CodeCol>
-      <Coeficients>0 70 41
-70 100 26
-100 200 21
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
 200 500 9
 500 1000 7
 1000 99999 6</Coeficients>
-      <Prefixes>TH
-EX</Prefixes>
+      <Prefixes>TH</Prefixes>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
@@ -399,9 +743,9 @@ EX</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>7,8</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 70 41
-70 100 26
-100 200 21
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
 200 500 9
 500 1000 7
 1000 99999 6</Coeficients>
@@ -511,13 +855,14 @@ VR
 WX
 CR
 ZI
-ZF</Prefixes>
+ZF
+PH</Prefixes>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
       <Rate>1</Rate>
       <FileName>autotech2.txt</FileName>
-      <BrandExtra>PROFIT 10
+      <BrandExtra>PROFIT 5
 FPS 5</BrandExtra>
     </Price>
     <Price>
@@ -531,9 +876,9 @@ FPS 5</BrandExtra>
       <BeginWith>2</BeginWith>
       <AmountCol>4,5,6,8</AmountCol>
       <CodeCol>1</CodeCol>
-      <Coeficients>0 70 41
-70 100 26
-100 200 21
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
 200 500 9
 500 1000 7
 1000 99999 6</Coeficients>
@@ -566,22 +911,21 @@ VL</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>7</AmountCol>
       <CodeCol>4</CodeCol>
-      <Coeficients>0 70 41
-70 100 26
-100 200 21
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
 200 500 9
 500 1000 7
 1000 99999 6</Coeficients>
       <Prefixes>TH
 PCA
 DCA
-EX
 EG</Prefixes>
       <Suffixes>AP</Suffixes>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
-      <Rate>32</Rate>
+      <Rate>34,2</Rate>
       <FileName>vladislav1.txt </FileName>
     </Price>
     <Price>
@@ -595,10 +939,10 @@ EG</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol />
       <CodeCol>1</CodeCol>
-      <Coeficients>0 70 40
-70 100 25
-100 200 20
-200 500 8
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
+200 500 9
 500 1000 7
 1000 99999 6</Coeficients>
       <Suffixes>_KOY
@@ -795,7 +1139,7 @@ _AMA
       <RemoveAllPrefixes>true</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
-      <Rate>26,9</Rate>
+      <Rate>27.4</Rate>
       <FileName>Azia parts.txt</FileName>
       <DefaultAmount>2</DefaultAmount>
     </Price>
@@ -837,12 +1181,17 @@ ZN</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>6</AmountCol>
       <CodeCol>3</CodeCol>
-      <Coeficients>0 70 100
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 31 
+100 150 22 
+150 200 17
+200 250 15 
+250 400 11
+400 600 9
+600 800 7
+800 1000 6
+1000 999999 5</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
@@ -860,12 +1209,17 @@ ZN</Prefixes>
       <BeginWith>1</BeginWith>
       <AmountCol>5</AmountCol>
       <CodeCol>8</CodeCol>
-      <Coeficients>0 70 40
-70 100 30
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
       <Prefixes>="
 AD
 SAS
@@ -905,12 +1259,17 @@ AVX</Prefixes>
       <BeginWith>1</BeginWith>
       <AmountCol>3</AmountCol>
       <CodeCol>1</CodeCol>
-      <Coeficients>0 70 100
-70 100 100
-100 200 40
-200 500 20
-500 1000 10
-1000 99999 10</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
       <RemoveAllPrefixes>true</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>true</ReplaceBrand>
@@ -929,14 +1288,13 @@ AVX</Prefixes>
       <BeginWith>3</BeginWith>
       <AmountCol>8</AmountCol>
       <CodeCol>3</CodeCol>
-      <Coeficients>0 70 40
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
-      <Prefixes>TH
-EX</Prefixes>
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
+200 500 9
+500 1000 7
+1000 99999 6</Coeficients>
+      <Prefixes>TH</Prefixes>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
@@ -954,12 +1312,17 @@ EX</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>6</AmountCol>
       <CodeCol>3</CodeCol>
-      <Coeficients>0 70 100
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 31 
+100 150 22 
+150 200 17
+200 250 15 
+250 400 11
+400 600 9
+600 800 7
+800 1000 6
+1000 999999 5</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
@@ -977,8 +1340,7 @@ EX</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>5</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 70 100
-70 100 100
+      <Coeficients>0 100 100
 100 200 40
 200 500 15
 500 1000 10
@@ -1026,7 +1388,7 @@ EX</Prefixes>
       <CodeCol>2</CodeCol>
       <Coeficients>0 100 100
 100 200 40
-200 500 20
+200 500 15
 500 1000 10
 1000 99999 10</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
@@ -1047,15 +1409,21 @@ EX</Prefixes>
       <BeginWith>18</BeginWith>
       <AmountCol>8</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 100 100
-100 200 40
-200 500 20
-500 1000 10
-1000 99999 10</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
-      <Rate>32</Rate>
+      <Rate>34,2</Rate>
       <FileName>scar.txt</FileName>
       <DefaultAmount>2</DefaultAmount>
     </Price>
@@ -1071,83 +1439,50 @@ EX</Prefixes>
       <BeginWith>18</BeginWith>
       <AmountCol>7,9</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 100 100
-100 200 40
-200 500 20
-500 1000 10
-1000 99999 10</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
-      <Rate>32</Rate>
+      <Rate>34,2</Rate>
       <FileName>scar1.txt</FileName>
       <DefaultAmount>2</DefaultAmount>
-    </Price>
-    <Price>
-      <Title>Авто Партс</Title>
-      <Format>Excel</Format>
-      <Extras />
-      <NameCol>2</NameCol>
-      <PriceCol>8</PriceCol>
-      <VendorCol>3</VendorCol>
-      <SheetNumber>1</SheetNumber>
-      <BeginWith>2</BeginWith>
-      <AmountCol>7</AmountCol>
-      <CodeCol>1</CodeCol>
-      <Coeficients>0 100 100
-100 200 40
-200 500 20
-500 1000 10
-1000 99999 10</Coeficients>
-      <RemoveAllPrefixes>false</RemoveAllPrefixes>
-      <RoundPrice>true</RoundPrice>
-      <ReplaceBrand>false</ReplaceBrand>
-      <Rate>1</Rate>
-      <FileName>avtoparts.txt</FileName>
-    </Price>
-    <Price>
-      <Title>АвтоДисконт</Title>
-      <Format>Excel</Format>
-      <Extras />
-      <NameCol>3</NameCol>
-      <PriceCol>5</PriceCol>
-      <VendorCol>2</VendorCol>
-      <SheetNumber>1</SheetNumber>
-      <BeginWith>3</BeginWith>
-      <AmountCol>4</AmountCol>
-      <CodeCol>1</CodeCol>
-      <Coeficients>0 100 100
-100 200 40
-200 500 20
-500 1000 10
-1000 99999 10</Coeficients>
-      <RemoveAllPrefixes>false</RemoveAllPrefixes>
-      <RoundPrice>false</RoundPrice>
-      <ReplaceBrand>false</ReplaceBrand>
-      <Rate>1</Rate>
-      <FileName>AvtoDiskont.txt</FileName>
     </Price>
     <Price>
       <Title>Весна Авто</Title>
       <Format>Excel</Format>
       <Extras />
       <NameCol>4</NameCol>
-      <PriceCol>9</PriceCol>
+      <PriceCol>11</PriceCol>
       <VendorCol>3</VendorCol>
       <SheetNumber>1</SheetNumber>
       <BeginWith>2</BeginWith>
       <AmountCol>8</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 70 100
-70 100 100
-100 200 40
-200 500 15
-500 1000 10
-1000 99999 10</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
-      <Rate>32</Rate>
+      <Rate>34,2</Rate>
       <FileName>VesnsAvto.txt</FileName>
     </Price>
     <Price>
@@ -1161,18 +1496,23 @@ EX</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>6</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 70 100
-70 100 30
-100 200 25
-200 500 10
-500 1000 10
-1000 99999 9</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
       <Prefixes>AD
 CFR</Prefixes>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
-      <Rate>32</Rate>
+      <Rate>34,2</Rate>
       <FileName>Busvarket.txt</FileName>
     </Price>
     <Price>
@@ -1188,7 +1528,7 @@ CFR</Prefixes>
       <CodeCol>2</CodeCol>
       <Coeficients>0 100 100
 100 200 40
-200 500 20
+200 500 15
 500 1000 10
 1000 99999 10</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
@@ -1210,7 +1550,7 @@ CFR</Prefixes>
       <CodeCol>2</CodeCol>
       <Coeficients>0 100 100
 100 200 40
-200 500 20
+200 500 15
 500 1000 10
 1000 99999 10</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
@@ -1230,12 +1570,12 @@ CFR</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>5</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 70 40
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
+200 500 9
+500 1000 7
+1000 99999 6</Coeficients>
       <Prefixes>3M
 DLZ
 FEB
@@ -1343,13 +1683,14 @@ VR
 WX
 CR
 ZI
-ZF</Prefixes>
+ZF
+PH</Prefixes>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
       <Rate>1</Rate>
       <FileName>autotech.txt</FileName>
-      <BrandExtra>PROFIT 10
+      <BrandExtra>PROFIT 5
 FPS 5</BrandExtra>
     </Price>
     <Price>
@@ -1363,12 +1704,12 @@ FPS 5</BrandExtra>
       <BeginWith>2</BeginWith>
       <AmountCol>7</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 70 40
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
+      <Coeficients>0 70 100
+70 100 35
+100 200 25
+200 500 9
+500 1000 7
+1000 99999 6</Coeficients>
       <Prefixes>TH
 KH
 AVX
@@ -1390,12 +1731,17 @@ ZN</Prefixes>
       <BeginWith>2</BeginWith>
       <AmountCol>5</AmountCol>
       <CodeCol>4</CodeCol>
-      <Coeficients>0 70 100
-70 100 30
-100 200 25
-200 500 10
-500 1000 10
-1000 99999 9</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
       <Prefixes>EX</Prefixes>
       <Suffixes>(DOOWON)
 (OEM)
@@ -1404,123 +1750,8 @@ ZN</Prefixes>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
-      <Rate>26,9</Rate>
+      <Rate>27.3</Rate>
       <FileName>Technolend.txt</FileName>
-    </Price>
-    <Price>
-      <Title>Інтеркарс 5,8 фил</Title>
-      <Format>Excel</Format>
-      <Extras />
-      <NameCol>3</NameCol>
-      <PriceCol>6</PriceCol>
-      <VendorCol>4</VendorCol>
-      <SheetNumber>2,3</SheetNumber>
-      <BeginWith>2</BeginWith>
-      <AmountCol>5</AmountCol>
-      <CodeCol>2</CodeCol>
-      <Coeficients>0 70 40
-70 100 25
-100 200 20
-200 500 8
-500 1000 6
-1000 99999 5</Coeficients>
-      <Prefixes>FE
-LMI
-EL
-TH
-EVR
-KYB
-SW
-HP
-LPR
-QB
-AD
-VR
-LE
-OPT
-FAG
-3M
-AD
-AE
-AH
-AJ
-BO
-BM
-BL
-BU
-CG
-CH
-CI
-TH
-AI
-CX
-DL
-DS
-EL
-EP
-ERT
-FE
-FO
-GL
-GO
-GT
-HL
-KS
-KY
-LK
-LM
-LP
-MF
-MH
-MN
-MO
-MT
-NG
-NI
-NK
-NP
-PR
-QB
-RU
-SF
-SH
-SK
-SN
-SW
-VL
-AD
-TH
-CO
-SAS
-DAF
-VAL
-BOS
-DAY
-OPT
-AUG
-MG
-FAE
-RL
-BS
-MON
-OSR
-HU
-IMP
-DEL
-LS
-NRF
-TRI 
-</Prefixes>
-      <Suffixes>OECO
-ECO
-WIX
-LS
-ZF</Suffixes>
-      <RemoveAllPrefixes>false</RemoveAllPrefixes>
-      <RoundPrice>false</RoundPrice>
-      <ReplaceBrand>false</ReplaceBrand>
-      <Rate>1</Rate>
-      <FileName>intercars5,8.txt</FileName>
     </Price>
     <Price>
       <Title>Бастион </Title>
@@ -1530,15 +1761,20 @@ ZF</Suffixes>
       <PriceCol>6</PriceCol>
       <VendorCol>2</VendorCol>
       <SheetNumber>1</SheetNumber>
-      <BeginWith>1</BeginWith>
+      <BeginWith>52</BeginWith>
       <AmountCol>7</AmountCol>
       <CodeCol>4</CodeCol>
-      <Coeficients>0 70 100
-70 100 30
-100 200 20
-200 500 15
-500 1000 10
-1000 99999 9</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
@@ -1556,17 +1792,67 @@ ZF</Suffixes>
       <BeginWith>3</BeginWith>
       <AmountCol>5</AmountCol>
       <CodeCol>2</CodeCol>
-      <Coeficients>0 70 100
-70 100 30
-100 200 25
-200 500 15
-500 1000 10
-1000 99999 9</Coeficients>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
       <RemoveAllPrefixes>false</RemoveAllPrefixes>
       <RoundPrice>true</RoundPrice>
       <ReplaceBrand>false</ReplaceBrand>
-      <Rate>32</Rate>
+      <Rate>34,2</Rate>
       <FileName>avdTreid.txt</FileName>
+    </Price>
+    <Price>
+      <Title>autoparts.com.ua</Title>
+      <Format>Excel</Format>
+      <Extras />
+      <NameCol>2</NameCol>
+      <PriceCol>8</PriceCol>
+      <VendorCol>3</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <BeginWith>2</BeginWith>
+      <AmountCol>7</AmountCol>
+      <CodeCol>1</CodeCol>
+      <Coeficients>0 50 100
+50 70 50
+70 100 35
+100 150 25
+150 200 20
+200 250 18
+250 400 15
+400 600 12
+600 800 10
+800 1000 9
+1000 999999 8</Coeficients>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>false</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>1</Rate>
+    </Price>
+    <Price>
+      <Title>Polsha</Title>
+      <Format>Csv</Format>
+      <Extras />
+      <NameCol>3</NameCol>
+      <PriceCol>5</PriceCol>
+      <VendorCol>1</VendorCol>
+      <SheetNumber>1</SheetNumber>
+      <ProviderCode>Polsha</ProviderCode>
+      <BeginWith>3</BeginWith>
+      <AmountCol>4</AmountCol>
+      <CodeCol>2</CodeCol>
+      <RemoveAllPrefixes>false</RemoveAllPrefixes>
+      <RoundPrice>false</RoundPrice>
+      <ReplaceBrand>false</ReplaceBrand>
+      <Rate>30</Rate>
+      <FileName>Polsha</FileName>
     </Price>
   </Prices>
   <Host>ftp://sky-auto.com.ua</Host>
