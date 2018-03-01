@@ -88,62 +88,80 @@ namespace Importer.Cross
             sheetTables.Add(table);
         }
 
-        public void Convert(Config config, String fileName)
+        protected FileStream createStream(String fileName)
         {
-            StreamWriter csv = new StreamWriter(Stream.Null);
+            return new FileStream(fileName, FileMode.Create, FileAccess.Write);
+        }
 
-            using (FileStream stream = new FileStream(fileName, FileMode.Create, FileAccess.Write))
+        protected ISheet createSheet(IWorkbook wb)
+        {
+            ISheet sheet = wb.CreateSheet("Sheet1");
+
+            IRow firstRow = sheet.CreateRow(0);
+
+            String[] firstLine = { "brand", "code", "brand_from", "code_from", "load_image", "load_characteristics", "load_cross", "load_applicability" };
+
+            for (int i = 0; i < firstLine.Length; i++)
             {
-                IWorkbook wb = new HSSFWorkbook();
-                ISheet sheet = wb.CreateSheet("Sheet1");
-
-                ICreationHelper cH = wb.GetCreationHelper();
-
-                IRow firstRow = sheet.CreateRow(0);
-
-                String[] firstLine = { "brand", "code", "brand_from", "code_from", "load_image", "load_characteristics", "load_cross", "load_applicability" };
-
-                for (int i = 0; i < firstLine.Length; i++)
-                {
-                    ICell headCell = firstRow.CreateCell(i);
-                    headCell.SetCellValue(firstLine[i]);
-                }
-
-                var table = SheetTables[config.SheetNumber];
-
-                int k = 1;
-
-                foreach (var row in table.Rows)
-                {
-                    Object[] arr = ((System.Data.DataRow)row).ItemArray;
-                    string codeCol = arr[config.CodeCol - 1].ToString();
-                    string brandCol = ReplaceBrand(arr[config.BrandCol - 1].ToString());
-                    string destCodeCol = arr[config.DestCodeCol - 1].ToString();
-                    string destBrandCol = ReplaceBrand(arr[config.DestBrandCol - 1].ToString());
-
-                    if ((codeCol == "") || (brandCol == "") || (destCodeCol == "") || (destBrandCol == ""))
-                    {
-                        continue;
-                    }
-
-                    String[] line = { brandCol, codeCol, destBrandCol, destCodeCol, "1", "1", "1", "1" };
-
-                    IRow excelRow = sheet.CreateRow(k++);
-
-                    for (int j = 0; j <line.Length; j++)
-                    {
-                        ICell cell = excelRow.CreateCell(j);
-                        cell.SetCellValue(line[j]);
-                    }
-                }
-
-                wb.Write(stream);
-
+                ICell headCell = firstRow.CreateCell(i);
+                headCell.SetCellValue(firstLine[i]);
             }
 
+            return sheet;
+        }
 
-            
-            csv.Close();
+        public void Convert(Config config, String fileName)
+        {
+            FileStream stream = createStream(fileName);
+
+            var table = SheetTables[config.SheetNumber];
+
+            IWorkbook wb = new HSSFWorkbook();
+            ISheet sheet = createSheet(wb);
+
+            int k = 1;
+            int fileCount = 1;
+
+            foreach (var row in table.Rows)
+            {
+                Object[] arr = ((System.Data.DataRow)row).ItemArray;
+                string codeCol = arr[config.CodeCol - 1].ToString();
+                string brandCol = ReplaceBrand(arr[config.BrandCol - 1].ToString());
+                string destCodeCol = arr[config.DestCodeCol - 1].ToString();
+                string destBrandCol = ReplaceBrand(arr[config.DestBrandCol - 1].ToString());
+
+                if ((codeCol == "") || (brandCol == "") || (destCodeCol == "") || (destBrandCol == ""))
+                {
+                    continue;
+                }
+
+                String[] line = { brandCol, codeCol, destBrandCol, destCodeCol, "1", "1", "1", "1" };
+
+                IRow excelRow = sheet.CreateRow(k++);
+
+                for (int j = 0; j < line.Length; j++)
+                {
+                    ICell cell = excelRow.CreateCell(j);
+                    cell.SetCellValue(line[j]);
+                }
+                if (k > 65500)
+                {
+                    /** Finalize file **/
+                    wb.Write(stream);
+
+                    var newfileName = String.Format("{0}_{1}{2}", Path.GetFileNameWithoutExtension(fileName), fileCount++, Path.GetExtension(fileName));
+                    newfileName = Path.Combine(Path.GetDirectoryName(fileName), newfileName);
+
+                    stream = createStream(newfileName);
+                    wb = new HSSFWorkbook();
+                    sheet = createSheet(wb);
+                    k = 1;
+                    /** And start new **/
+                }
+            }
+
+            wb.Write(stream);
+
         }
 
         private string ReplaceBrand(string brand)
