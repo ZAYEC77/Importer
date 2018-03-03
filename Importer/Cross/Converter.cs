@@ -148,19 +148,21 @@ namespace Importer.Cross
                 {
                     /** Finalize file **/
                     wb.Write(stream);
+                    stream.Close();
 
                     var newfileName = String.Format("{0}_{1}{2}", Path.GetFileNameWithoutExtension(fileName), fileCount++, Path.GetExtension(fileName));
                     newfileName = Path.Combine(Path.GetDirectoryName(fileName), newfileName);
 
+                    /** And start new **/
                     stream = createStream(newfileName);
                     wb = new HSSFWorkbook();
                     sheet = createSheet(wb);
                     k = 1;
-                    /** And start new **/
                 }
             }
-
+            /** Finalize last file **/
             wb.Write(stream);
+            stream.Close();
 
         }
 
